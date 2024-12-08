@@ -1,23 +1,75 @@
-function CityContentOne() {
-  return (
-    <>
-      <div class="container_textbox">
-        <img src="/images/earth.png" style={{ width: '50px' }} alt="" />
-        <h2 class="title">떠나고 싶은 도시는?</h2>
-        <span class="text">1곳을 선택해주세요.</span>
-      </div>
-      <div class="city">
-        <input type="checkbox" name="domestic" id="domestic" />
-        <label for="domestic" class="citytext">
-          국내
-        </label>
-        <input type="checkbox" name="foreignCountry" id="foreignCountry" />
-        <label for="foreignCountry" class="citytext">
-          해외
-        </label>
-      </div>
-    </>
-  )
+function CityContentFive() {
+	return (
+		<>
+			<div class="container_textbox">
+				<img src="/images/bag.png" style={{ width: "50px" }} alt="" />
+				<h2 class="title">내가 선호하는 여행 스타일은?</h2>
+				<span class="text">다중 선택이 가능해요.</span>
+			</div>
+			<div class="trip">
+				<div class="trip_style">
+					<div class="checkbox-item">
+						<input type="checkbox" name="activity" id="activity" />
+						<label for="activity" class="citytext">
+							체험액티비티
+						</label>
+					</div>
+					<div class="checkbox-item">
+						<input type="checkbox" name="hotplace" id="hotplace" />
+						<label for="hotplace" class="citytext">
+							SNS 핫플레이스
+						</label>
+					</div>
+					<div class="checkbox-item">
+						<input type="checkbox" name="nature" id="nature" />
+						<label for="nature" class="citytext">
+							자연과 함께
+						</label>
+					</div>
+					<div class="checkbox-item">
+						<input type="checkbox" name="tourist" id="tourist" />
+						<label for="tourist" class="citytext">
+							유명 관광지는 필수
+						</label>
+					</div>
+					<div class="checkbox-item">
+						<input type="checkbox" name="healing" id="healing" />
+						<label for="healing" class="citytext">
+							여유롭게 힐링
+						</label>
+					</div>
+					<div class="checkbox-item">
+						<input type="checkbox" name="culture" id="culture" />
+						<label for="culture" class="citytext">
+							문화예술역사
+						</label>
+					</div>
+					<div class="checkbox-item">
+						<input
+							type="checkbox"
+							name="travel_destination"
+							id="travel_destination"
+						/>
+						<label for="travel_destination" class="citytext">
+							여행지 느낌 물씬
+						</label>
+					</div>
+					<div class="checkbox-item">
+						<input type="checkbox" name="shopping" id="shopping" />
+						<label for="shopping" class="citytext">
+							쇼핑은 열정적으로
+						</label>
+					</div>
+					<div class="checkbox-item">
+						<input type="checkbox" name="food" id="food" />
+						<label for="food" class="citytext">
+							관광보다 먹방
+						</label>
+					</div>
+				</div>
+			</div>
+		</>
+	);
 }
 
-export default CityContentOne
+export default CityContentFive;

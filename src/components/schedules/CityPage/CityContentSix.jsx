@@ -1,23 +1,39 @@
-function CityContentOne() {
-  return (
-    <>
-      <div class="container_textbox">
-        <img src="/images/earth.png" style={{ width: '50px' }} alt="" />
-        <h2 class="title">떠나고 싶은 도시는?</h2>
-        <span class="text">1곳을 선택해주세요.</span>
-      </div>
-      <div class="city">
-        <input type="checkbox" name="domestic" id="domestic" />
-        <label for="domestic" class="citytext">
-          국내
-        </label>
-        <input type="checkbox" name="foreignCountry" id="foreignCountry" />
-        <label for="foreignCountry" class="citytext">
-          해외
-        </label>
-      </div>
-    </>
-  )
+function CityContentSix() {
+	return (
+		<>
+			<div class="container_textbox">
+				<img src="./images/schedule.png" alt="" />
+				<h2 class="title">내가 선호하는 여행 일정은?</h2>
+				<span class="text">
+					선택해주신 스타일로 일정을 만들어 드려요.
+				</span>
+			</div>
+			<div class="schedule-preference">
+				<div class="schedule-option">
+					<div class="checkbox-item">
+						<input
+							type="checkbox"
+							name="packed_schedule"
+							id="packed_schedule"
+						/>
+						<label for="packed_schedule" class="citytext">
+							뺴곡한 일정 선호
+						</label>
+					</div>
+					<div class="checkbox-item">
+						<input
+							type="checkbox"
+							name="spacious_schedule"
+							id="spacious_schedule"
+						/>
+						<label for="spacious_schedule" class="citytext">
+							널널한 일정 선호
+						</label>
+					</div>
+				</div>
+			</div>
+		</>
+	);
 }
 
-export default CityContentOne
+export default CityContentSix;
