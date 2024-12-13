@@ -1,4 +1,4 @@
-function CityContentFive() {
+function TravelStyle() {
 	return (
 		<>
 			<div class="container_textbox">
@@ -72,4 +72,4 @@ function CityContentFive() {
 	);
 }
 
-export default CityContentFive;
+export default TravelStyle;

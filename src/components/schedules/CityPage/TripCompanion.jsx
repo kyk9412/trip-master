@@ -1,4 +1,4 @@
-function CityContentFour() {
+function TripCompanion() {
 	return (
 		<>
 			<div class="container_textbox">
@@ -50,4 +50,4 @@ function CityContentFour() {
 	);
 }
 
-export default CityContentFour;
+export default TripCompanion;

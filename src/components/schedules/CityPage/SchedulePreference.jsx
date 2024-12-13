@@ -1,4 +1,4 @@
-function CityContentSix() {
+function SchedulePreference() {
 	return (
 		<>
 			<div class="container_textbox">
@@ -36,4 +36,4 @@ function CityContentSix() {
 	);
 }
 
-export default CityContentSix;
+export default SchedulePreference;

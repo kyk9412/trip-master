@@ -1,4 +1,4 @@
-function CityContentThree() {
+function TripDuration() {
 	return (
 		<>
 			<div class="container_textbox">
@@ -74,4 +74,4 @@ function CityContentThree() {
 	);
 }
 
-export default CityContentThree;
+export default TripDuration;
