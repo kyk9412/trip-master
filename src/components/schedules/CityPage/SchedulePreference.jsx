@@ -1,32 +1,32 @@
 function SchedulePreference() {
 	return (
 		<>
-			<div class="container_textbox">
+			<div className="container_textbox">
 				<img src="./images/schedule.png" alt="" />
-				<h2 class="title">내가 선호하는 여행 일정은?</h2>
-				<span class="text">
+				<h2 className="title">내가 선호하는 여행 일정은?</h2>
+				<span className="text">
 					선택해주신 스타일로 일정을 만들어 드려요.
 				</span>
 			</div>
-			<div class="schedule-preference">
-				<div class="schedule-option">
-					<div class="checkbox-item">
+			<div className="schedule-preference">
+				<div className="schedule-option">
+					<div className="checkbox-item">
 						<input
 							type="checkbox"
 							name="packed_schedule"
 							id="packed_schedule"
 						/>
-						<label for="packed_schedule" class="citytext">
+						<label htmlFor="packed_schedule" className="citytext">
 							뺴곡한 일정 선호
 						</label>
 					</div>
-					<div class="checkbox-item">
+					<div className="checkbox-item">
 						<input
 							type="checkbox"
 							name="spacious_schedule"
 							id="spacious_schedule"
 						/>
-						<label for="spacious_schedule" class="citytext">
+						<label htmlFor="spacious_schedule" className="citytext">
 							널널한 일정 선호
 						</label>
 					</div>

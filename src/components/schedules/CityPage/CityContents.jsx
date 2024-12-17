@@ -5,15 +5,22 @@ import TripCompanion from "./TripCompanion";
 import TravelStyle from "./TravelStyle";
 import SchedulePreference from "./SchedulePreference";
 
-function CityContents({ progressNumber }) {
+function CityContents({ stepStatus, setStepStatus }) {
 	return (
-		<div class="main-wrap">
-			{progressNumber === 1 && <PlaceSelection />}
-			{progressNumber === 2 && <CityContentTwo />}
-			{progressNumber === 3 && <TripDuration />}
-			{progressNumber === 4 && <TripCompanion />}
-			{progressNumber === 5 && <TravelStyle />}
-			{progressNumber === 6 && <SchedulePreference />}
+		<div className="main-wrap">
+			{stepStatus.progress === 1 && (
+				<PlaceSelection setStepStatus={setStepStatus} />
+			)}
+			{stepStatus.progress === 2 && (
+				<CityContentTwo
+					stepStatus={stepStatus}
+					setStepStatus={setStepStatus}
+				/>
+			)}
+			{stepStatus.progress === 3 && <TripDuration />}
+			{stepStatus.progress === 4 && <TripCompanion />}
+			{stepStatus.progress === 5 && <TravelStyle />}
+			{stepStatus.progress === 6 && <SchedulePreference />}
 		</div>
 	);
 }

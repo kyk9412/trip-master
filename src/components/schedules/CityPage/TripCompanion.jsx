@@ -1,46 +1,46 @@
 function TripCompanion() {
 	return (
 		<>
-			<div class="container_textbox">
+			<div className="container_textbox">
 				<img src="/images/with.png" style={{ width: "50px" }} alt="" />
-				<h2 class="title">누구와 함께 떠나나요?</h2>
-				<span class="text">다중 선택이 가능해요.</span>
+				<h2 className="title">누구와 함께 떠나나요?</h2>
+				<span className="text">다중 선택이 가능해요.</span>
 			</div>
-			<div class="trip">
-				<div class="trip_together">
-					<div class="checkbox-item">
+			<div className="trip">
+				<div className="trip_together">
+					<div className="checkbox-item">
 						<input type="checkbox" name="alone" id="alone" />
-						<label for="alone" class="citytext">
+						<label htmlFor="alone" className="citytext">
 							혼자
 						</label>
 					</div>
-					<div class="checkbox-item">
+					<div className="checkbox-item">
 						<input type="checkbox" name="friend" id="friend" />
-						<label for="friend" class="citytext">
+						<label htmlFor="friend" className="citytext">
 							친구와
 						</label>
 					</div>
-					<div class="checkbox-item">
+					<div className="checkbox-item">
 						<input type="checkbox" name="couple" id="couple" />
-						<label for="couple" class="citytext">
+						<label htmlFor="couple" className="citytext">
 							연인or배우자와
 						</label>
 					</div>
-					<div class="checkbox-item">
+					<div className="checkbox-item">
 						<input type="checkbox" name="child" id="child" />
-						<label for="child" class="citytext">
+						<label htmlFor="child" className="citytext">
 							아이와
 						</label>
 					</div>
-					<div class="checkbox-item">
+					<div className="checkbox-item">
 						<input type="checkbox" name="parents" id="parents" />
-						<label for="parents" class="citytext">
+						<label htmlFor="parents" className="citytext">
 							부모님과
 						</label>
 					</div>
-					<div class="checkbox-item">
+					<div className="checkbox-item">
 						<input type="checkbox" name="other" id="other" />
-						<label for="other" class="citytext">
+						<label htmlFor="other" className="citytext">
 							기타
 						</label>
 					</div>

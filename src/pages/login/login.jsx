@@ -5,27 +5,27 @@ function Login() {
 		<>
 			<Header />
 			<main>
-				<section class="main-container">
-					<article class="main-wrap">
-						<div class="main-visual">
+				<section className="main-container">
+					<article className="main-wrap">
+						<div className="main-visual">
 							<img
 								src="./images/intro_main.png"
 								alt="intro_main"
 							/>
 						</div>
-						<div class="container_textbox">
-							<div class="title">
+						<div className="container_textbox">
+							<div className="title">
 								나를 아는 여행앱
 								<br />
 								트리플
 							</div>
-							<div class="text">
+							<div className="text">
 								예약부터 일정까지 여행이 더 쉬워집니다
 							</div>
 						</div>
-						<div class="sec_login">
-							<form onsubmit="">
-								<div class="input_form">
+						<div className="sec_login">
+							<htmlForm onsubmit="">
+								<div className="input_htmlForm">
 									<input
 										type="text"
 										id="loginid"
@@ -39,41 +39,41 @@ function Login() {
 										autocomplete="off"
 									/>
 								</div>
-							</form>
-							<div class="saveid-btn">
+							</htmlForm>
+							<div className="saveid-btn">
 								<input
 									type="checkbox"
 									name="saveid"
 									id="saveid"
 								/>
-								<label for="saveid">아이디저장</label>
+								<label htmlFor="saveid">아이디저장</label>
 							</div>
-							<div class="login-btn">
+							<div className="login-btn">
 								<button
 									type="button"
 									id="loginbtn"
-									class="loginbtn"
+									className="loginbtn"
 								>
 									로그인
 								</button>
 							</div>
 						</div>
 
-						<div class="ect-login">
-							<div class="sns-login">
-								<button type="button" class="sns-login">
+						<div className="ect-login">
+							<div className="sns-login">
+								<button type="button" className="sns-login">
 									<img src="./images/kakao.png" alt="kakao" />
 								</button>
-								<button type="button" class="sns-login">
+								<button type="button" className="sns-login">
 									<img src="./images/naver.png" alt="naver" />
 								</button>
-								<button type="button" class="sns-login">
+								<button type="button" className="sns-login">
 									<img
 										src="./images/facebook.png"
 										alt="facebook"
 									/>
 								</button>
-								<button type="button" class="sns-login">
+								<button type="button" className="sns-login">
 									<img src="./images/apple.png" alt="apple" />
 								</button>
 							</div>
