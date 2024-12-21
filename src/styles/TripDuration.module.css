@@ -1,4 +1,4 @@
-.main-container {
+/* .main-container {
 	width: 100%;
 	height: 100%;
 }
@@ -17,13 +17,13 @@
 }
 .main-container .main-wrap {
 	margin: 0 auto;
-}
-.main-wrap .container_textbox {
+} */
+.container_textbox {
 	font-family: "Nanum Gothic", sans-serif;
 	text-align: center;
 	margin-top: 70px;
 }
-.container_textbox .title {
+.title {
 	font-size: 30px;
 	line-height: 36px;
 	font-weight: 700;
@@ -31,17 +31,17 @@
 	margin-top: 15px;
 	padding-bottom: 10px;
 }
-.container_textbox .text {
+.text {
 	font-size: 15px;
 	font-weight: 400;
 	color: #787878;
 }
-.main-wrap {
+/* .main-wrap {
 	max-width: 800px;
 	width: 100%;
 	height: 100%;
-}
-.main-wrap .trip {
+} */
+.trip {
 	position: relative;
 	display: flex;
 	margin: 40px auto;
@@ -49,7 +49,7 @@
 	align-items: center;
 }
 
-.main-wrap .trip_together {
+.trip_duration {
 	justify-content: center;
 	max-width: 800px;
 	width: 100%;
@@ -58,7 +58,7 @@
 	gap: 15px;
 	padding-top: 35px;
 }
-.main-wrap .trip_together .checkbox-item {
+.trip_duration .checkbox_item {
 	max-width: 800px;
 	align-items: center;
 	display: flex;
@@ -66,14 +66,14 @@
 	box-sizing: border-box;
 }
 
-.main-wrap .trip_together .checkbox-item input {
+.checkbox_item input {
 	opacity: 0;
 	position: absolute;
 	top: 0;
 	left: 0;
 	visibility: hidden;
 }
-.main-wrap .checkbox-item label {
+.trip label {
 	display: flex;
 	width: 256px;
 	height: 50px;
@@ -90,14 +90,14 @@
 	color: #181818;
 }
 
-.main-wrap .checkbox-item .citytext.active {
+.trip .citytext.active {
 	font-family: "Nanum Gothic", sans-serif;
 	font-weight: 700;
 	background-color: #e7e7e7;
 	border: 2px solid #368fff;
 	color: var(--color_button_box);
 }
-.city-next-button {
+/* .city-next-button {
 	max-width: 800px;
 	width: 100%;
 	margin: 0 auto;
@@ -127,4 +127,4 @@
 	color: #e7e7e7;
 	font-family: "Nanum Gothic", sans-serif;
 	font-weight: 700;
-}
+} */

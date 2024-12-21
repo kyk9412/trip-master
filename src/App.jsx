@@ -1,11 +1,5 @@
 import "./style.css";
-// import "./common.css";
-// import "./schedule.css";
-// import "./PlaceSelection.module.css";
-// import "./TripDuration.module.css";
-// import "./TripCompanion.module.css";
-// import "./TravelStyle.module.css";
-// import "./SchedulePreference.module.css";
+
 import Nav from "./components/Nav";
 import Header from "./components/Header";
 import Main from "./components/Main";

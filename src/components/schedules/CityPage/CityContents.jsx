@@ -17,7 +17,9 @@ function CityContents({ stepStatus, setStepStatus }) {
 					setStepStatus={setStepStatus}
 				/>
 			)}
-			{stepStatus.progress === 3 && <TripDuration />}
+			{stepStatus.progress === 3 && (
+				<TripDuration setStepStatus={setStepStatus} />
+			)}
 			{stepStatus.progress === 4 && <TripCompanion />}
 			{stepStatus.progress === 5 && <TravelStyle />}
 			{stepStatus.progress === 6 && <SchedulePreference />}
