@@ -33,7 +33,7 @@ export const Trip = styled.div`
 	align-items: center;
 `;
 
-// .trip
+// .trip_duration
 export const TripDuration = styled.div`
 	justify-content: center;
 	max-width: 800px;
