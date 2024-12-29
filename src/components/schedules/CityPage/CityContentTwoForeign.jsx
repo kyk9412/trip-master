@@ -1,5 +1,4 @@
 import AreaButton from "../../../common/AreaButton";
-// import Style from "../../../styles/CityContentTwoForeign.module.css";
 
 function CityContentTwoForeign() {
 	const cityList = [

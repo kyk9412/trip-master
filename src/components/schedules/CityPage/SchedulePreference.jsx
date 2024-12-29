@@ -1,5 +1,5 @@
 import React from "react";
-import Style from "../../../styles/SchedulePreference.module.css";
+// import Style from "../../../styles/SchedulePreference.module.css";
 
 function SchedulePreference() {
 	return (
