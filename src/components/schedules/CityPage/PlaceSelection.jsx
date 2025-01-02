@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-function CityContentOne({ setStepStatus }) {
+function PlaceSelection({ setStepStatus }) {
 	const [activeDomestic, setActiveDomestic] = useState(false);
 	const [activeForeign, setActiveForeign] = useState(false);
 
@@ -62,4 +62,4 @@ function CityContentOne({ setStepStatus }) {
 	);
 }
 
-export default CityContentOne;
+export default PlaceSelection;

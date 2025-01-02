@@ -1,4 +1,5 @@
-import AreaButton from "../../../common/AreaButton";
+import AreaButton from "@common/AreaButton";
+import Style from "./Domestic.style";
 
 function CityContentTwoDomestic() {
 	const cityList = [
@@ -17,13 +18,17 @@ function CityContentTwoDomestic() {
 
 	return (
 		<>
-			<div className="container_texgapyeongtbox">
-				<img src="images/airplane.png" alt="" />
+			<div className="container_textbox">
+				<img
+					src="/images/airplane.png"
+					style={{ width: "50px" }}
+					alt=""
+				/>
 				<h2 className="title">국내에서 떠나고 싶은 곳은?</h2>
 				<span className="text">1곳을 선택해주세요.</span>
 			</div>
 			<div className="korea">
-				<p>대한민국</p>
+				<Style.Text>대한민국</Style.Text>
 				<div className="korea_area">
 					{cityList.map((city, index) => {
 						return (

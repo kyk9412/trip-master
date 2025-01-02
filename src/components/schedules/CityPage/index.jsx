@@ -1,6 +1,6 @@
 import { useState } from "react";
-import CityProgress from "./CityProgress";
-import CityNextButton from "./CityNextButton";
+import CityProgress from "@common/CityPage/CityProgress";
+import CityNextButton from "@common/CityPage/CityNextButton";
 import CityContents from "./CityContents";
 
 function CityPage() {
