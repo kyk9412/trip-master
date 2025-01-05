@@ -81,27 +81,62 @@ function CityContentTwoForeign() {
 			<div className="foreign">
 				<div className="foreign_area">
 					<p className="country">일본</p>
-					{cityList.map((city, index) => {
-						return (
-							<AreaButton
-								Key={city.id}
-								text={city.text}
-								id={city.id}
-							/>
-						);
-					})}
+					{cityList
+						.filter(({ category }) => category === "japan")
+						.map((city, index) => {
+							return (
+								<AreaButton
+									Key={city.id}
+									text={city.text}
+									id={city.id}
+								/>
+							);
+						})}
 				</div>
 
 				<div className="foreign_area">
 					<p className="country">중화/중국</p>
+					{cityList.map((city, index) => {
+						if (city.category === "china") {
+							return (
+								<AreaButton
+									Key={city.id}
+									text={city.text}
+									id={city.id}
+								/>
+							);
+						}
+					})}
 				</div>
 
 				<div className="foreign_area">
 					<p className="country">유럽</p>
+					{cityList.map((city, index) => {
+						if (city.category === "europe") {
+							return (
+								<AreaButton
+									Key={city.id}
+									text={city.text}
+									id={city.id}
+								/>
+							);
+						}
+					})}
 				</div>
 
 				<div className="foreign_area">
 					<p className="country">동남아시아</p>
+					{cityList.map((city, index) => {
+						if (city.category === "southeastAsia") {
+							return (
+								<AreaButton
+									Key={city.id}
+									text={city.text}
+									id={city.id}
+								/>
+							);
+						}
+					})}
 				</div>
 
 				<div className="foreign_area">
@@ -110,10 +145,32 @@ function CityContentTwoForeign() {
 
 				<div className="foreign_area">
 					<p className="country">미주</p>
+					{cityList.map((city, index) => {
+						if (city.category === "america") {
+							return (
+								<AreaButton
+									Key={city.id}
+									text={city.text}
+									id={city.id}
+								/>
+							);
+						}
+					})}
 				</div>
 
 				<div className="foreign_area">
-					<p className="country">미주</p>
+					<p className="country">남태평양</p>
+					{cityList.map((city, index) => {
+						if (city.category === "southpacific") {
+							return (
+								<AreaButton
+									Key={city.id}
+									text={city.text}
+									id={city.id}
+								/>
+							);
+						}
+					})}
 				</div>
 			</div>
 		</>
