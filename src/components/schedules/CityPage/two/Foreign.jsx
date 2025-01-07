@@ -1,7 +1,8 @@
-import AreaButton from "@common/AreaButton";
-import Style from "./ForeignStyle";
+import Button from "@common/CityPage/Button";
+import useStep from "@hooks/useStep.js";
+import style from "./ForeignStyle";
 
-function CityContentTwoForeign() {
+function Foreign({ setStepStatus }) {
 	const cityList = [
 		{ text: "도쿄", id: "tokyo" },
 		{ text: "후쿠오카", id: "fukuoka" },
@@ -67,6 +68,9 @@ function CityContentTwoForeign() {
 		{ text: "괌", id: "guam" },
 		{ text: "사이판", id: "saipan" },
 	];
+
+	const { handleClick } = useStep(setStepStatus);
+
 	return (
 		<>
 			<div className="container_textbox">
@@ -85,7 +89,8 @@ function CityContentTwoForeign() {
 						.filter(({ category }) => category === "japan")
 						.map((city, index) => {
 							return (
-								<AreaButton
+								<Button
+									handleClick={handleClick}
 									Key={city.id}
 									text={city.text}
 									id={city.id}
@@ -99,7 +104,8 @@ function CityContentTwoForeign() {
 					{cityList.map((city, index) => {
 						if (city.category === "china") {
 							return (
-								<AreaButton
+								<Button
+									handleClick={handleClick}
 									Key={city.id}
 									text={city.text}
 									id={city.id}
@@ -114,7 +120,8 @@ function CityContentTwoForeign() {
 					{cityList.map((city, index) => {
 						if (city.category === "europe") {
 							return (
-								<AreaButton
+								<Button
+									handleClick={handleClick}
 									Key={city.id}
 									text={city.text}
 									id={city.id}
@@ -129,7 +136,8 @@ function CityContentTwoForeign() {
 					{cityList.map((city, index) => {
 						if (city.category === "southeastAsia") {
 							return (
-								<AreaButton
+								<Button
+									handleClick={handleClick}
 									Key={city.id}
 									text={city.text}
 									id={city.id}
@@ -148,7 +156,8 @@ function CityContentTwoForeign() {
 					{cityList.map((city, index) => {
 						if (city.category === "america") {
 							return (
-								<AreaButton
+								<Button
+									handleClick={handleClick}
 									Key={city.id}
 									text={city.text}
 									id={city.id}
@@ -163,7 +172,8 @@ function CityContentTwoForeign() {
 					{cityList.map((city, index) => {
 						if (city.category === "southpacific") {
 							return (
-								<AreaButton
+								<Button
+									handleClick={handleClick}
 									Key={city.id}
 									text={city.text}
 									id={city.id}
@@ -177,4 +187,4 @@ function CityContentTwoForeign() {
 	);
 }
 
-export default CityContentTwoForeign;
+export default Foreign;

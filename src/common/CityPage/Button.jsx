@@ -17,9 +17,14 @@ const Label = styled.label`
 	color: #181818;
 `;
 
-function AreaButton({ text, id }) {
+function Button({ text, id, handleClick }) {
 	return (
-		<div className="area">
+		<div
+			onClick={() => {
+				console.log("TEST", text, id);
+				handleClick(id);
+			}}
+		>
 			<input type="checkbox" name={id} id={id} />
 			<Label htmlFor={id} className="citytext">
 				{text}
@@ -28,4 +33,4 @@ function AreaButton({ text, id }) {
 	);
 }
 
-export default AreaButton;
+export default Button;

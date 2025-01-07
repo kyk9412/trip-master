@@ -1,7 +1,7 @@
-import AreaButton from "@common/AreaButton";
+import Button from "@common/CityPage/Button";
 import Style from "./DomesticStyle";
 
-function CityContentTwoDomestic() {
+function Domestic({ setStepStatus }) {
 	const cityList = [
 		{ text: "가평'양평", id: "gapyeong" },
 		{ text: "강릉'속초", id: "gangneung" },
@@ -16,6 +16,18 @@ function CityContentTwoDomestic() {
 		{ text: "통영'거제'남해", id: "tongyeong" },
 		{ text: "포항'안동", id: "pohang" },
 	];
+	const handleClick = (id) => {
+		setStepStatus((prevState) => {
+			return {
+				...prevState,
+				canNext: true,
+				option: {
+					...prevState.option,
+					two: id,
+				},
+			};
+		});
+	};
 	return (
 		<>
 			<div className="container_textbox">
@@ -32,10 +44,11 @@ function CityContentTwoDomestic() {
 				<div className="korea_area">
 					{cityList.map((city, index) => {
 						return (
-							<AreaButton
+							<Button
 								key={city.id}
 								text={city.text}
 								id={city.id}
+								handleClick={handleClick}
 							/>
 						);
 					})}
@@ -45,4 +58,4 @@ function CityContentTwoDomestic() {
 	);
 }
 
-export default CityContentTwoDomestic;
+export default Domestic;
