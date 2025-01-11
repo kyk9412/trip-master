@@ -1,6 +1,6 @@
 import react from "react";
 import Header from "../../Header";
-import style from "./Loginstyle";
+import Style from "./Loginstyle";
 function Login() {
 	return (
 		<main>
