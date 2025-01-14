@@ -1,4 +1,4 @@
-import PlaceSelection from "./PlaceSelection";
+import TripSelection from "./TripSelection";
 import CityContentTwo from "./two/CityContentTwo";
 import TripDuration from "./TripDuration";
 import TripCompanion from "./TripCompanion";
@@ -9,7 +9,10 @@ function CityContents({ stepStatus, setStepStatus }) {
 	return (
 		<div className="main-wrap">
 			{stepStatus.progress === 1 && (
-				<PlaceSelection setStepStatus={setStepStatus} />
+				<TripSelection
+					stepStatus={stepStatus}
+					setStepStatus={setStepStatus}
+				/>
 			)}
 			{stepStatus.progress === 2 && (
 				<CityContentTwo
@@ -18,11 +21,29 @@ function CityContents({ stepStatus, setStepStatus }) {
 				/>
 			)}
 			{stepStatus.progress === 3 && (
-				<TripDuration setStepStatus={setStepStatus} />
+				<TripDuration
+					stepStatus={stepStatus}
+					setStepStatus={setStepStatus}
+				/>
 			)}
-			{stepStatus.progress === 4 && <TripCompanion />}
-			{stepStatus.progress === 5 && <TravelStyle />}
-			{stepStatus.progress === 6 && <SchedulePreference />}
+			{stepStatus.progress === 4 && (
+				<TripCompanion
+					stepStatus={stepStatus}
+					setStepStatus={setStepStatus}
+				/>
+			)}
+			{stepStatus.progress === 5 && (
+				<TravelStyle
+					stepStatus={stepStatus}
+					setStepStatus={setStepStatus}
+				/>
+			)}
+			{stepStatus.progress === 6 && (
+				<SchedulePreference
+					stepStatus={stepStatus}
+					setStepStatus={setStepStatus}
+				/>
+			)}
 		</div>
 	);
 }

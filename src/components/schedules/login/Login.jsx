@@ -3,7 +3,7 @@ import Header from "../../Header";
 import Style from "./Loginstyle";
 function Login() {
 	return (
-		<main>
+		<>
 			<section className="main-container">
 				<article className="main-wrap">
 					<div className="main-visual">
@@ -72,7 +72,7 @@ function Login() {
 					</div>
 				</article>
 			</section>
-		</main>
+		</>
 	);
 }
 export default Login;

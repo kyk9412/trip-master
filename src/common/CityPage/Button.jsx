@@ -17,16 +17,15 @@ const Label = styled.label`
 	color: #181818;
 `;
 
-function Button({ text, id, handleClick }) {
+function Button({ text, id, handleClick, active }) {
 	return (
 		<div
 			onClick={() => {
-				console.log("TEST", text, id);
 				handleClick(id);
 			}}
 		>
 			<input type="checkbox" name={id} id={id} />
-			<Label htmlFor={id} className="citytext">
+			<Label htmlFor={id} className={`citytext ${active && "active"}`}>
 				{text}
 			</Label>
 		</div>

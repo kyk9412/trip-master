@@ -1,6 +1,6 @@
 import React from "react";
-// import Style from "@styles/CityProgress.module.css";
-import Style from "./NavBarStyle";
+import Style from "@styles/CityProgress.module.css";
+// import Style from "./NavBarStyle";
 
 function CityProgress({ stepStatus }) {
 	return (

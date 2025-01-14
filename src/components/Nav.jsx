@@ -5,7 +5,7 @@ function Nav({ modalState, setModalState }) {
 
 	const navigate = useNavigate();
 	const handleOnClick = () => {
-		navigate("/Schedule/login/Login");
+		navigate("/schedule/login/Login");
 	};
 
 	const handleClick = () => {

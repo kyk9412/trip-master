@@ -9,7 +9,7 @@ function Header({ setModalState }) {
 
 	const navigate = useNavigate();
 	const handleClick = () => {
-		navigate("#");
+		navigate("/");
 	};
 
 	return (
