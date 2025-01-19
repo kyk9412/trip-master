@@ -1,11 +1,8 @@
 import Button from "@common/CityPage/Button";
-import useStep from "@hooks/useStep.js";
 import Style from "./ForeignStyle";
-import CityListByCategory from "./CityListByCategory";
 
 function Foreign({ setStepStatus }) {
 	const cityList = [
-		//japan
 		{ text: "도쿄", id: "tokyo", category: "japan" },
 		{ text: "후쿠오카", id: "fukuoka", category: "japan" },
 		{ text: "오사카", id: "osaka", category: "japan" },
@@ -14,7 +11,6 @@ function Foreign({ setStepStatus }) {
 		{ text: "삿포로", id: "sapporo", category: "japan" },
 		{ text: "오키나와", id: "okinawa", category: "japan" },
 
-		//china
 		{ text: "가오슝", id: "kaohsiung", category: "china" },
 		{ text: "칭다오", id: "qingdao", category: "china" },
 		{ text: "홍콩", id: "hongkong", category: "china" },
@@ -22,7 +18,6 @@ function Foreign({ setStepStatus }) {
 		{ text: "상하이", id: "shanghai", category: "china" },
 		{ text: "베이징", id: "beijing", category: "china" },
 
-		//europe
 		{ text: "그라나다", id: "granada", category: "europe" },
 		{ text: "두브로브니크", id: "dubrovnik", category: "europe" },
 		{ text: "리스본", id: "lisbon", category: "europe" },
@@ -46,7 +41,6 @@ function Foreign({ setStepStatus }) {
 		{ text: "암스테르담", id: "amsterdam", category: "europe" },
 		{ text: "베를린", id: "berlin", category: "europe" },
 
-		//southeastAsia
 		{ text: "나트랑", id: "nhatrang", category: "southeastAsia" },
 		{ text: "치앙마이", id: "chiangmai", category: "southeastAsia" },
 		{ text: "푸꾸옥", id: "phuquoc", category: "southeastAsia" },
@@ -64,10 +58,8 @@ function Foreign({ setStepStatus }) {
 		{ text: "푸켓", id: "phuket", category: "southeastAsia" },
 		{ text: "보라카이", id: "boracay", category: "southeastAsia" },
 
-		//westAsia
 		{ text: "두바이", id: "dubai", category: "westAsia" },
 
-		//america
 		{ text: "벤쿠버", id: "vancouver", category: "america" },
 		{ text: "샌프란시스코", id: "sanfrancisco", category: "america" },
 		{ text: "토론토", id: "toronto", category: "america" },
@@ -75,15 +67,25 @@ function Foreign({ setStepStatus }) {
 		{ text: "뉴욕", id: "newyork", category: "america" },
 		{ text: "로스앤젤레스", id: "losangeles", category: "america" },
 
-		//southPacific
 		{ text: "시드니", id: "sydney", category: "southPacific" },
 		{ text: "멜버른", id: "melbourne", category: "southPacific" },
 		{ text: "괌", id: "guam", category: "southPacific" },
 		{ text: "사이판", id: "saipan", category: "southPacific" },
 	];
 
-	const { handleClick } = useStep(setStepStatus);
-
+	// const { handleClick } = useStep(setStepStatus);
+	const handleClick = (id) => {
+		setStepStatus((prevState) => {
+			return {
+				...prevState,
+				canNext: true,
+				option: {
+					...prevState.option,
+					two: id,
+				},
+			};
+		});
+	};
 	return (
 		<>
 			<div className="container_textbox">
@@ -97,14 +99,10 @@ function Foreign({ setStepStatus }) {
 			</div>
 			<div className="foreign">
 				<div className="foreign_area">
+					<p className="country">일본</p>
 					<Style.Text>일본</Style.Text>
-					<CityListByCategory
-						category="japan"
-						cityList={cityList}
-						handleClick={handleClick}
-					/>
 
-					{/* {cityList
+					{cityList
 						.filter(({ category }) => category === "japan")
 						.map((city, index) => {
 							return (
@@ -115,81 +113,65 @@ function Foreign({ setStepStatus }) {
 									id={city.id}
 								/>
 							);
-						})} */}
+						})}
 				</div>
 
 				<div className="foreign_area">
 					<p className="country">중화/중국</p>
-					<CityListByCategory
-						category="china"
-						cityList={cityList}
-						handleClick={handleClick}
-					/>
-					{/* {cityList.map((city, index) => {
-						if (city.category === "china") {
+					{cityList
+						.filter(({ category }) => category === "china")
+						.map((city, index) => {
 							return (
 								<Button
 									handleClick={handleClick}
-									key={city.id}
+									Key={city.id}
 									text={city.text}
 									id={city.id}
 								/>
 							);
-						}
-					})} */}
+						})}
 				</div>
 
 				<div className="foreign_area">
 					<p className="country">유럽</p>
-					<CityListByCategory
-						category="europe"
-						cityList={cityList}
-						handleClick={handleClick}
-					/>
-					{/* {cityList.map((city, index) => {
-						if (city.category === "europe") {
+
+					{cityList
+						.filter(({ category }) => category === "europe")
+						.map((city, index) => {
 							return (
 								<Button
 									handleClick={handleClick}
-									key={city.id}
+									Key={city.id}
 									text={city.text}
 									id={city.id}
 								/>
 							);
-						}
-					})} */}
+						})}
 				</div>
 
 				<div className="foreign_area">
 					<p className="country">동남아시아</p>
-					<CityListByCategory
-						category="southeastAsia"
-						cityList={cityList}
-						handleClick={handleClick}
-					/>
-					{/* {cityList.map((city, index) => {
-						if (city.category === "southeastAsia") {
+
+					{cityList
+						.filter(({ category }) => category === "southeastAsia")
+						.map((city, index) => {
 							return (
 								<Button
 									handleClick={handleClick}
-									key={city.id}
+									Key={city.id}
 									text={city.text}
 									id={city.id}
 								/>
 							);
-						}
-					})} */}
+						})}
 				</div>
 
 				<div className="foreign_area">
 					<p className="country">서아시아</p>
-					<CityListByCategory
-						category="westAsia"
-						cityList={cityList}
-						handleClick={handleClick}
-					/>
-					{/* {cityList.map((city, index) => {
-						if (city.category === "westAsia") {
+
+					{cityList
+						.filter(({ category }) => category === "westAsia")
+						.map((city, index) => {
 							return (
 								<Button
 									handleClick={handleClick}
@@ -198,19 +180,15 @@ function Foreign({ setStepStatus }) {
 									id={city.id}
 								/>
 							);
-						}
-					})} */}
+						})}
 				</div>
 
 				<div className="foreign_area">
 					<p className="country">미주</p>
-					<CityListByCategory
-						category="america"
-						cityList={cityList}
-						handleClick={handleClick}
-					/>
-					{/* {cityList.map((city, index) => {
-						if (city.category === "america") {
+
+					{cityList
+						.filter(({ category }) => category === "america")
+						.map((city, index) => {
 							return (
 								<Button
 									handleClick={handleClick}
@@ -219,19 +197,15 @@ function Foreign({ setStepStatus }) {
 									id={city.id}
 								/>
 							);
-						}
-					})} */}
+						})}
 				</div>
 
 				<div className="foreign_area">
 					<p className="country">남태평양</p>
-					<CityListByCategory
-						category="southPacific"
-						cityList={cityList}
-						handleClick={handleClick}
-					/>
-					{/* {cityList.map((city, index) => {
-						if (city.category === "southPacific") {
+
+					{cityList
+						.filter(({ category }) => category === "southPacific")
+						.map((city, index) => {
 							return (
 								<Button
 									handleClick={handleClick}
@@ -240,8 +214,7 @@ function Foreign({ setStepStatus }) {
 									id={city.id}
 								/>
 							);
-						}
-					})} */}
+						})}
 				</div>
 			</div>
 		</>
