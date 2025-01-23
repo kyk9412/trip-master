@@ -1,7 +1,10 @@
 import Button from "@common/CityPage/Button";
 import Style from "./ForeignStyle";
+import useStep from "@hooks/useStep";
 
-function Foreign({ setStepStatus }) {
+function Foreign({ stepStatus, setStepStatus }) {
+	const { getCurrentId, handleClick } = useStep(setStepStatus);
+
 	const cityList = [
 		{ text: "도쿄", id: "tokyo", category: "japan" },
 		{ text: "후쿠오카", id: "fukuoka", category: "japan" },
@@ -74,18 +77,18 @@ function Foreign({ setStepStatus }) {
 	];
 
 	// const { handleClick } = useStep(setStepStatus);
-	const handleClick = (id) => {
-		setStepStatus((prevState) => {
-			return {
-				...prevState,
-				canNext: true,
-				option: {
-					...prevState.option,
-					two: id,
-				},
-			};
-		});
-	};
+	// const handleClick = (id) => {
+	// 	setStepStatus((prevState) => {
+	// 		return {
+	// 			...prevState,
+	// 			canNext: true,
+	// 			option: {
+	// 				...prevState.option,
+	// 				two: id,
+	// 			},
+	// 		};
+	// 	});
+	// };
 	return (
 		<>
 			<div className="container_textbox">
@@ -111,6 +114,9 @@ function Foreign({ setStepStatus }) {
 									key={city.id}
 									text={city.text}
 									id={city.id}
+									active={
+										getCurrentId(stepStatus) === city.id
+									}
 								/>
 							);
 						})}
@@ -127,6 +133,9 @@ function Foreign({ setStepStatus }) {
 									Key={city.id}
 									text={city.text}
 									id={city.id}
+									active={
+										getCurrentId(stepStatus) === city.id
+									}
 								/>
 							);
 						})}
@@ -144,6 +153,9 @@ function Foreign({ setStepStatus }) {
 									Key={city.id}
 									text={city.text}
 									id={city.id}
+									active={
+										getCurrentId(stepStatus) === city.id
+									}
 								/>
 							);
 						})}
@@ -161,6 +173,9 @@ function Foreign({ setStepStatus }) {
 									Key={city.id}
 									text={city.text}
 									id={city.id}
+									active={
+										getCurrentId(stepStatus) === city.id
+									}
 								/>
 							);
 						})}
@@ -178,6 +193,9 @@ function Foreign({ setStepStatus }) {
 									key={city.id}
 									text={city.text}
 									id={city.id}
+									active={
+										getCurrentId(stepStatus) === city.id
+									}
 								/>
 							);
 						})}
@@ -195,6 +213,9 @@ function Foreign({ setStepStatus }) {
 									key={city.id}
 									text={city.text}
 									id={city.id}
+									active={
+										getCurrentId(stepStatus) === city.id
+									}
 								/>
 							);
 						})}
@@ -212,6 +233,9 @@ function Foreign({ setStepStatus }) {
 									key={city.id}
 									text={city.text}
 									id={city.id}
+									active={
+										getCurrentId(stepStatus) === city.id
+									}
 								/>
 							);
 						})}

@@ -14,6 +14,7 @@ function CityContents({ stepStatus, setStepStatus }) {
 					setStepStatus={setStepStatus}
 				/>
 			)}
+
 			{stepStatus.progress === 2 && (
 				<CityContentTwo
 					stepStatus={stepStatus}

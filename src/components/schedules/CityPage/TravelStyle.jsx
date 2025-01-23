@@ -1,6 +1,9 @@
-import React from "react";
 // import Style from "../../../styles/TravelStyle.module.css";
-function TravelStyle() {
+import Button from "@common/CityPage/Button";
+import useStep from "@hooks/useStep";
+
+function TravelStyle({ stepStatus, setStepStatus }) {
+	const { handleMultiClick, getCurrentId } = useStep(setStepStatus);
 	return (
 		<>
 			<div className="container_textbox">
@@ -10,67 +13,63 @@ function TravelStyle() {
 			</div>
 			<div className="trip">
 				<div className="trip_style">
-					<div className="checkbox_item">
-						<input type="checkbox" name="activity" id="activity" />
-						<label htmlFor="activity" className="citytext">
-							체험액티비티
-						</label>
-					</div>
-					<div className="checkbox_item">
-						<input type="checkbox" name="hotplace" id="hotplace" />
-						<label htmlFor="hotplace" className="citytext">
-							SNS 핫플레이스
-						</label>
-					</div>
-					<div className="checkbox_item">
-						<input type="checkbox" name="nature" id="nature" />
-						<label htmlFor="nature" className="citytext">
-							자연과 함께
-						</label>
-					</div>
-					<div className="checkbox_item">
-						<input type="checkbox" name="tourist" id="tourist" />
-						<label htmlFor="tourist" className="citytext">
-							유명 관광지는 필수
-						</label>
-					</div>
-					<div className="checkbox_item">
-						<input type="checkbox" name="healing" id="healing" />
-						<label htmlFor="healing" className="citytext">
-							여유롭게 힐링
-						</label>
-					</div>
-					<div className="checkbox_item">
-						<input type="checkbox" name="culture" id="culture" />
-						<label htmlFor="culture" className="citytext">
-							문화예술역사
-						</label>
-					</div>
-					<div className="checkbox_item">
-						<input
-							type="checkbox"
-							name="travel_destination"
-							id="travel_destination"
-						/>
-						<label
-							htmlFor="travel_destination"
-							className="citytext"
-						>
-							여행지 느낌 물씬
-						</label>
-					</div>
-					<div className="checkbox_item">
-						<input type="checkbox" name="shopping" id="shopping" />
-						<label htmlFor="shopping" className="citytext">
-							쇼핑은 열정적으로
-						</label>
-					</div>
-					<div className="checkbox_item">
-						<input type="checkbox" name="food" id="food" />
-						<label htmlFor="food" className="citytext">
-							관광보다 먹방
-						</label>
-					</div>
+					<Button
+						id="activity"
+						text="체험액티비티"
+						handleClick={handleMultiClick}
+						active={getCurrentId(stepStatus) === "activity"}
+					/>
+					<Button
+						id="hotplace"
+						text="SNS 핫플레이스"
+						handleClick={handleMultiClick}
+						active={getCurrentId(stepStatus) === "hotplace"}
+					/>
+					<Button
+						id="nature"
+						text="자연과 함께"
+						handleClick={handleMultiClick}
+						active={getCurrentId(stepStatus) === "nature"}
+					/>
+					<Button
+						id="tourist"
+						text="유명 관광지는 필수"
+						handleClick={handleMultiClick}
+						active={getCurrentId(stepStatus) === "tourist"}
+					/>
+					<Button
+						id="healing"
+						text="여유롭게 힐링"
+						handleClick={handleMultiClick}
+						active={getCurrentId(stepStatus) === "healing"}
+					/>
+					<Button
+						id="culture"
+						text="문화예술역사"
+						handleClick={handleMultiClick}
+						active={getCurrentId(stepStatus) === "culture"}
+					/>
+					<Button
+						id="travel_destination"
+						text="여행지 느낌 물씬"
+						handleClick={handleMultiClick}
+						active={
+							getCurrentId(stepStatus) === "travel_destination"
+						}
+					/>
+					<Button
+						id="shopping"
+						text="쇼핑은 열정적으로"
+						handleClick={handleMultiClick}
+						active={getCurrentId(stepStatus) === "shopping"}
+					/>
+
+					<Button
+						id="food"
+						text="관광보다 먹방"
+						handleClick={handleMultiClick}
+						active={getCurrentId(stepStatus) === "food"}
+					/>
 				</div>
 			</div>
 		</>

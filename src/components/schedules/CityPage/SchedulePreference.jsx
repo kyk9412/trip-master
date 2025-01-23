@@ -1,7 +1,9 @@
-import React from "react";
 // import Style from "../../../styles/SchedulePreference.module.css";
+import Button from "@common/CityPage/Button";
+import useStep from "@hooks/useStep";
 
-function SchedulePreference() {
+function SchedulePreference({ stepStatus, setStepStatus }) {
+	const { handleClick, getCurrentId } = useStep(setStepStatus);
 	return (
 		<>
 			<div className="container_textbox">
@@ -17,26 +19,20 @@ function SchedulePreference() {
 			</div>
 			<div className="schedule_preference">
 				<div className="schedule_option">
-					<div className="checkbox_item">
-						<input
-							type="checkbox"
-							name="packed_schedule"
-							id="packed_schedule"
-						/>
-						<label htmlFor="packed_schedule" className="citytext">
-							뺴곡한 일정 선호
-						</label>
-					</div>
-					<div className="checkbox_item">
-						<input
-							type="checkbox"
-							name="spacious_schedule"
-							id="spacious_schedule"
-						/>
-						<label htmlFor="spacious_schedule" className="citytext">
-							널널한 일정 선호
-						</label>
-					</div>
+					<Button
+						id="packed_schedule"
+						text="빼곡한 일정 선호"
+						handleClick={handleClick}
+						active={getCurrentId(stepStatus) === "packed_schedule"}
+					/>
+					<Button
+						id="spacious_schedule"
+						text="널널한 일정 선호"
+						handleClick={handleClick}
+						active={
+							getCurrentId(stepStatus) === "spacious_schedule"
+						}
+					/>
 				</div>
 			</div>
 		</>

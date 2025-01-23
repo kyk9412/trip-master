@@ -8,9 +8,17 @@ function CityContentTwo({ stepStatus, setStepStatus }) {
 
 	return (
 		<>
-			{one === "domestic" && <Domestic setStepStatus={setStepStatus} />}
+			{one === "domestic" && (
+				<Domestic
+					stepStatus={stepStatus}
+					setStepStatus={setStepStatus}
+				/>
+			)}
 			{one === "foreignCountry" && (
-				<Foreign setStepStatus={setStepStatus} />
+				<Foreign
+					stepStatus={stepStatus}
+					setStepStatus={setStepStatus}
+				/>
 			)}
 		</>
 	);

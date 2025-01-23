@@ -1,10 +1,10 @@
 import React from "react";
 // import Style from "../../../styles/TripDuration.module.css";
 import Button from "@common/CityPage/Button";
-import useStep from "@hooks/useStep.js";
+import useStep from "@hooks/useStep";
 
-function TripDuration({ setStepStatus }) {
-	const { handleClick } = useStep(setStepStatus);
+function TripDuration({ stepStatus, setStepStatus }) {
+	const { handleClick, getCurrentId } = useStep(setStepStatus);
 
 	return (
 		<>
@@ -23,31 +23,37 @@ function TripDuration({ setStepStatus }) {
 						text="당일치기"
 						id="daytrip"
 						handleClick={handleClick}
+						active={getCurrentId(stepStatus) === "daytrip"}
 					/>
 					<Button
 						text="1박2일"
 						id="overnight_trip"
 						handleClick={handleClick}
+						active={getCurrentId(stepStatus) === "overnight_trip"}
 					/>
 					<Button
 						text="2박3일"
 						id="2night_3day"
 						handleClick={handleClick}
+						active={getCurrentId(stepStatus) === "2night_3day"}
 					/>
 					<Button
 						text="3박4일"
 						id="3night_4day"
 						handleClick={handleClick}
+						active={getCurrentId(stepStatus) === "3night_4day"}
 					/>
 					<Button
 						text="4박5일"
 						id="4night_5day"
 						handleClick={handleClick}
+						active={getCurrentId(stepStatus) === "4night_5day"}
 					/>
 					<Button
-						text="4박5일"
+						text="5박6일"
 						id="5night_6day"
 						handleClick={handleClick}
+						active={getCurrentId(stepStatus) === "5night_6day"}
 					/>
 				</div>
 			</div>
