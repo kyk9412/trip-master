@@ -14,7 +14,6 @@ function CityContents({ stepStatus, setStepStatus }) {
 					setStepStatus={setStepStatus}
 				/>
 			)}
-
 			{stepStatus.progress === 2 && (
 				<CityContentTwo
 					stepStatus={stepStatus}
@@ -48,5 +47,4 @@ function CityContents({ stepStatus, setStepStatus }) {
 		</div>
 	);
 }
-
 export default CityContents;

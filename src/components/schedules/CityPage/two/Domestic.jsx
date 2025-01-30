@@ -3,7 +3,7 @@ import Style from "./DomesticStyle";
 import useStep from "@hooks/useStep";
 
 function Domestic({ stepStatus, setStepStatus }) {
-	const { getCurrentId, handleClick } = useStep(setStepStatus);
+	const { handleClick, isSingleSelected } = useStep(setStepStatus);
 	const cityList = [
 		{ text: "가평'양평", id: "gapyeong" },
 		{ text: "강릉'속초", id: "gangneung" },
@@ -18,18 +18,7 @@ function Domestic({ stepStatus, setStepStatus }) {
 		{ text: "통영'거제'남해", id: "tongyeong" },
 		{ text: "포항'안동", id: "pohang" },
 	];
-	// const handleClick = (id) => {
-	// 	setStepStatus((prevState) => {
-	// 		return {
-	// 			...prevState,
-	// 			canNext: true,
-	// 			option: {
-	// 				...prevState.option,
-	// 				two: id,
-	// 			},
-	// 		};
-	// 	});
-	// };
+
 	return (
 		<>
 			<div className="container_textbox">
@@ -51,7 +40,7 @@ function Domestic({ stepStatus, setStepStatus }) {
 								text={city.text}
 								id={city.id}
 								handleClick={handleClick}
-								active={getCurrentId(stepStatus) === city.id}
+								active={isSingleSelected(stepStatus, city.id)}
 							/>
 						);
 					})}

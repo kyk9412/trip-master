@@ -3,7 +3,7 @@ import Button from "@common/CityPage/Button";
 import useStep from "@hooks/useStep";
 
 function TravelStyle({ stepStatus, setStepStatus }) {
-	const { handleMultiClick, getCurrentId } = useStep(setStepStatus);
+	const { handleMultiClick, isMultiSelected } = useStep(setStepStatus);
 	return (
 		<>
 			<div className="container_textbox">
@@ -17,58 +17,59 @@ function TravelStyle({ stepStatus, setStepStatus }) {
 						id="activity"
 						text="체험액티비티"
 						handleClick={handleMultiClick}
-						active={getCurrentId(stepStatus) === "activity"}
+						active={isMultiSelected(stepStatus, "activity")}
 					/>
 					<Button
 						id="hotplace"
 						text="SNS 핫플레이스"
 						handleClick={handleMultiClick}
-						active={getCurrentId(stepStatus) === "hotplace"}
+						active={isMultiSelected(stepStatus, "hotplace")}
 					/>
 					<Button
 						id="nature"
 						text="자연과 함께"
 						handleClick={handleMultiClick}
-						active={getCurrentId(stepStatus) === "nature"}
+						active={isMultiSelected(stepStatus, "nature")}
 					/>
 					<Button
 						id="tourist"
 						text="유명 관광지는 필수"
 						handleClick={handleMultiClick}
-						active={getCurrentId(stepStatus) === "tourist"}
+						active={isMultiSelected(stepStatus, "tourist")}
 					/>
 					<Button
 						id="healing"
 						text="여유롭게 힐링"
 						handleClick={handleMultiClick}
-						active={getCurrentId(stepStatus) === "healing"}
+						active={isMultiSelected(stepStatus, "healing")}
 					/>
 					<Button
 						id="culture"
 						text="문화예술역사"
 						handleClick={handleMultiClick}
-						active={getCurrentId(stepStatus) === "culture"}
+						active={isMultiSelected(stepStatus, "culture")}
 					/>
 					<Button
 						id="travel_destination"
 						text="여행지 느낌 물씬"
 						handleClick={handleMultiClick}
-						active={
-							getCurrentId(stepStatus) === "travel_destination"
-						}
+						active={isMultiSelected(
+							stepStatus,
+							"travel_destination"
+						)}
 					/>
 					<Button
 						id="shopping"
 						text="쇼핑은 열정적으로"
 						handleClick={handleMultiClick}
-						active={getCurrentId(stepStatus) === "shopping"}
+						active={isMultiSelected(stepStatus, "shopping")}
 					/>
 
 					<Button
 						id="food"
 						text="관광보다 먹방"
 						handleClick={handleMultiClick}
-						active={getCurrentId(stepStatus) === "food"}
+						active={isMultiSelected(stepStatus, "food")}
 					/>
 				</div>
 			</div>

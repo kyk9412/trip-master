@@ -1,9 +1,10 @@
+import React from "react";
 // import Style from "../../../styles/SchedulePreference.module.css";
 import Button from "@common/CityPage/Button";
 import useStep from "@hooks/useStep";
 
 function SchedulePreference({ stepStatus, setStepStatus }) {
-	const { handleClick, getCurrentId } = useStep(setStepStatus);
+	const { handleClick, isSingleSelected } = useStep(setStepStatus);
 	return (
 		<>
 			<div className="container_textbox">
@@ -23,15 +24,16 @@ function SchedulePreference({ stepStatus, setStepStatus }) {
 						id="packed_schedule"
 						text="빼곡한 일정 선호"
 						handleClick={handleClick}
-						active={getCurrentId(stepStatus) === "packed_schedule"}
+						active={isSingleSelected(stepStatus, "packed_schedule")}
 					/>
 					<Button
 						id="spacious_schedule"
 						text="널널한 일정 선호"
 						handleClick={handleClick}
-						active={
-							getCurrentId(stepStatus) === "spacious_schedule"
-						}
+						active={isSingleSelected(
+							stepStatus,
+							"spacious_schedule"
+						)}
 					/>
 				</div>
 			</div>

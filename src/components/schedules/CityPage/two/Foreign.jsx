@@ -3,7 +3,7 @@ import Style from "./ForeignStyle";
 import useStep from "@hooks/useStep";
 
 function Foreign({ stepStatus, setStepStatus }) {
-	const { getCurrentId, handleClick } = useStep(setStepStatus);
+	const { handleClick, isSingleSelected } = useStep(setStepStatus);
 
 	const cityList = [
 		{ text: "도쿄", id: "tokyo", category: "japan" },
@@ -114,9 +114,10 @@ function Foreign({ stepStatus, setStepStatus }) {
 									key={city.id}
 									text={city.text}
 									id={city.id}
-									active={
-										getCurrentId(stepStatus) === city.id
-									}
+									active={isSingleSelected(
+										stepStatus,
+										city.id
+									)}
 								/>
 							);
 						})}
@@ -133,9 +134,10 @@ function Foreign({ stepStatus, setStepStatus }) {
 									Key={city.id}
 									text={city.text}
 									id={city.id}
-									active={
-										getCurrentId(stepStatus) === city.id
-									}
+									active={isSingleSelected(
+										stepStatus,
+										city.id
+									)}
 								/>
 							);
 						})}
@@ -153,9 +155,10 @@ function Foreign({ stepStatus, setStepStatus }) {
 									Key={city.id}
 									text={city.text}
 									id={city.id}
-									active={
-										getCurrentId(stepStatus) === city.id
-									}
+									active={isSingleSelected(
+										stepStatus,
+										city.id
+									)}
 								/>
 							);
 						})}
@@ -173,9 +176,10 @@ function Foreign({ stepStatus, setStepStatus }) {
 									Key={city.id}
 									text={city.text}
 									id={city.id}
-									active={
-										getCurrentId(stepStatus) === city.id
-									}
+									active={isSingleSelected(
+										stepStatus,
+										city.id
+									)}
 								/>
 							);
 						})}
@@ -193,9 +197,10 @@ function Foreign({ stepStatus, setStepStatus }) {
 									key={city.id}
 									text={city.text}
 									id={city.id}
-									active={
-										getCurrentId(stepStatus) === city.id
-									}
+									active={isSingleSelected(
+										stepStatus,
+										city.id
+									)}
 								/>
 							);
 						})}
@@ -213,9 +218,10 @@ function Foreign({ stepStatus, setStepStatus }) {
 									key={city.id}
 									text={city.text}
 									id={city.id}
-									active={
-										getCurrentId(stepStatus) === city.id
-									}
+									active={isSingleSelected(
+										stepStatus,
+										city.id
+									)}
 								/>
 							);
 						})}
@@ -233,9 +239,10 @@ function Foreign({ stepStatus, setStepStatus }) {
 									key={city.id}
 									text={city.text}
 									id={city.id}
-									active={
-										getCurrentId(stepStatus) === city.id
-									}
+									active={isSingleSelected(
+										stepStatus,
+										city.id
+									)}
 								/>
 							);
 						})}
