@@ -76,19 +76,6 @@ function Foreign({ stepStatus, setStepStatus }) {
 		{ text: "사이판", id: "saipan", category: "southPacific" },
 	];
 
-	// const { handleClick } = useStep(setStepStatus);
-	// const handleClick = (id) => {
-	// 	setStepStatus((prevState) => {
-	// 		return {
-	// 			...prevState,
-	// 			canNext: true,
-	// 			option: {
-	// 				...prevState.option,
-	// 				two: id,
-	// 			},
-	// 		};
-	// 	});
-	// };
 	return (
 		<>
 			<div className="container_textbox">
