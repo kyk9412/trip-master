@@ -1,6 +1,5 @@
 import Button from '@common/CityPage/Button';
 import Style from './DomesticStyle';
-
 import usePlan from '@store/usePlan';
 
 function Domestic() {

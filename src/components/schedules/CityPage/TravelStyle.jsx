@@ -1,10 +1,8 @@
-// import Style from "../../../styles/TravelStyle.module.css";
 import Button from '@common/CityPage/Button';
-import useStep from '@hooks/useStep';
 import usePlan from '@store/usePlan';
 
 function TravelStyle() {
-  const { handleMultiClick, isMultiSelected } = useStep();
+  const { handleMultiClick, isMultiSelected } = usePlan();
   return (
     <>
       <div className="container_textbox">

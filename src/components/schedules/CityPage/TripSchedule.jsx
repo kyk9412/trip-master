@@ -1,11 +1,9 @@
 import React from 'react';
-// import Style from "../../../styles/SchedulePreference.module.css";
 import Button from '@common/CityPage/Button';
-import useStep from '@hooks/useStep';
 import usePlan from '@store/usePlan';
 
-function SchedulePreference() {
-  const { handleSingleClick, isSingleSelected } = useStep();
+function TripSchedule() {
+  const { handleSingleClick, isSingleSelected } = usePlan();
   return (
     <>
       <div className="container_textbox">
@@ -33,4 +31,4 @@ function SchedulePreference() {
   );
 }
 
-export default SchedulePreference;
+export default TripSchedule;

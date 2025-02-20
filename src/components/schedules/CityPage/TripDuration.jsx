@@ -1,5 +1,4 @@
 import React from 'react';
-// import Style from "../../../styles/TripDuration.module.css";
 import Button from '@common/CityPage/Button';
 import usePlan from '@store/usePlan';
 
