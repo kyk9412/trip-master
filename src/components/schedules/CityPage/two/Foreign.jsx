@@ -1,9 +1,9 @@
-import Button from '@common/CityPage/Button';
-import Style from './ForeignStyle';
-import usePlan from '@store/usePlan';
+import Button from "@common/CityPage/Button";
+import Style from "./ForeignStyle";
+import usePlan from "@store/usePlan";
 
 function Foreign() {
-  const { handleSingleClick, isSingleSelected } = usePlan();
+	const { handleSingleClick, isSingleSelected } = usePlan();
 
   const cityList = [
     { text: '도쿄', id: 'tokyo', category: 'japan' },
@@ -76,142 +76,146 @@ function Foreign() {
     { text: '사이판', id: 'saipan', category: 'southPacific' },
   ];
 
-  return (
-    <>
-      <div className="container_textbox">
-        <img src="/images/airplane.png" style={{ width: '50px' }} alt="" />
-        <h2 className="title">해외에서 떠나고 싶은 곳은?</h2>
-        <span className="text">1곳을 선택해주세요.</span>
-      </div>
-      <div className="foreign">
-        <div className="foreign_area">
-          <p className="country">일본</p>
-          <Style.Text>일본</Style.Text>
+	return (
+		<>
+			<div className="container_textbox">
+				<img
+					src="/images/airplane.png"
+					style={{ width: "50px" }}
+					alt=""
+				/>
+				<h2 className="title">해외에서 떠나고 싶은 곳은?</h2>
+				<span className="text">1곳을 선택해주세요.</span>
+			</div>
+			<div className="foreign">
+				<div className="foreign_area">
+					<p className="country">일본</p>
+					<Style.Text>일본</Style.Text>
 
-          {cityList
-            .filter(({ category }) => category === 'japan')
-            .map((city, index) => {
-              return (
-                <Button
-                  handleClick={handleSingleClick}
-                  key={city.id}
-                  text={city.text}
-                  id={city.id}
-                  active={isSingleSelected(city.id)}
-                />
-              );
-            })}
-        </div>
+					{cityList
+						.filter(({ category }) => category === "japan")
+						.map((city, index) => {
+							return (
+								<Button
+									handleClick={handleSingleClick}
+									key={city.id}
+									text={city.text}
+									id={city.id}
+									active={isSingleSelected(city.id)}
+								/>
+							);
+						})}
+				</div>
 
-        <div className="foreign_area">
-          <p className="country">중화/중국</p>
-          {cityList
-            .filter(({ category }) => category === 'china')
-            .map((city, index) => {
-              return (
-                <Button
-                  handleClick={handleSingleClick}
-                  Key={city.id}
-                  text={city.text}
-                  id={city.id}
-                  active={isSingleSelected(city.id)}
-                />
-              );
-            })}
-        </div>
+				<div className="foreign_area">
+					<p className="country">중화/중국</p>
+					{cityList
+						.filter(({ category }) => category === "china")
+						.map((city, index) => {
+							return (
+								<Button
+									handleClick={handleSingleClick}
+									Key={city.id}
+									text={city.text}
+									id={city.id}
+									active={isSingleSelected(city.id)}
+								/>
+							);
+						})}
+				</div>
 
         <div className="foreign_area">
           <p className="country">유럽</p>
 
-          {cityList
-            .filter(({ category }) => category === 'europe')
-            .map((city, index) => {
-              return (
-                <Button
-                  handleClick={handleSingleClick}
-                  Key={city.id}
-                  text={city.text}
-                  id={city.id}
-                  active={isSingleSelected(city.id)}
-                />
-              );
-            })}
-        </div>
+					{cityList
+						.filter(({ category }) => category === "europe")
+						.map((city, index) => {
+							return (
+								<Button
+									handleClick={handleSingleClick}
+									Key={city.id}
+									text={city.text}
+									id={city.id}
+									active={isSingleSelected(city.id)}
+								/>
+							);
+						})}
+				</div>
 
         <div className="foreign_area">
           <p className="country">동남아시아</p>
 
-          {cityList
-            .filter(({ category }) => category === 'southeastAsia')
-            .map((city, index) => {
-              return (
-                <Button
-                  handleClick={handleSingleClick}
-                  Key={city.id}
-                  text={city.text}
-                  id={city.id}
-                  active={isSingleSelected(city.id)}
-                />
-              );
-            })}
-        </div>
+					{cityList
+						.filter(({ category }) => category === "southeastAsia")
+						.map((city, index) => {
+							return (
+								<Button
+									handleClick={handleSingleClick}
+									Key={city.id}
+									text={city.text}
+									id={city.id}
+									active={isSingleSelected(city.id)}
+								/>
+							);
+						})}
+				</div>
 
         <div className="foreign_area">
           <p className="country">서아시아</p>
 
-          {cityList
-            .filter(({ category }) => category === 'westAsia')
-            .map((city, index) => {
-              return (
-                <Button
-                  handleClick={handleSingleClick}
-                  key={city.id}
-                  text={city.text}
-                  id={city.id}
-                  active={isSingleSelected(city.id)}
-                />
-              );
-            })}
-        </div>
+					{cityList
+						.filter(({ category }) => category === "westAsia")
+						.map((city, index) => {
+							return (
+								<Button
+									handleClick={handleSingleClick}
+									key={city.id}
+									text={city.text}
+									id={city.id}
+									active={isSingleSelected(city.id)}
+								/>
+							);
+						})}
+				</div>
 
         <div className="foreign_area">
           <p className="country">미주</p>
 
-          {cityList
-            .filter(({ category }) => category === 'america')
-            .map((city, index) => {
-              return (
-                <Button
-                  handleClick={handleSingleClick}
-                  key={city.id}
-                  text={city.text}
-                  id={city.id}
-                  active={isSingleSelected(city.id)}
-                />
-              );
-            })}
-        </div>
+					{cityList
+						.filter(({ category }) => category === "america")
+						.map((city, index) => {
+							return (
+								<Button
+									handleClick={handleSingleClick}
+									key={city.id}
+									text={city.text}
+									id={city.id}
+									active={isSingleSelected(city.id)}
+								/>
+							);
+						})}
+				</div>
 
         <div className="foreign_area">
           <p className="country">남태평양</p>
 
-          {cityList
-            .filter(({ category }) => category === 'southPacific')
-            .map((city, index) => {
-              return (
-                <Button
-                  handleClick={handleSingleClick}
-                  key={city.id}
-                  text={city.text}
-                  id={city.id}
-                  active={isSingleSelected(city.id)}
-                />
-              );
-            })}
-        </div>
-      </div>
-    </>
-  );
+					{cityList
+						.filter(({ category }) => category === "southPacific")
+						.map((city, index) => {
+							return (
+								<Button
+									handleClick={handleSingleClick}
+									key={city.id}
+									text={city.text}
+									id={city.id}
+									active={isSingleSelected(city.id)}
+								/>
+							);
+						})}
+				</div>
+			</div>
+		</>
+	);
 }
 
 export default Foreign;
