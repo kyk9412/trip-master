@@ -1,9 +1,9 @@
 import Button from "@common/CityPage/Button";
 import Style from "./ForeignStyle";
-import useStep from "@hooks/useStep";
+import usePlan from "@store/usePlan";
 
-function Foreign({ stepStatus, setStepStatus }) {
-	const { getCurrentId, handleClick } = useStep(setStepStatus);
+function Foreign() {
+	const { handleSingleClick, isSingleSelected } = usePlan();
 
 	const cityList = [
 		{ text: "도쿄", id: "tokyo", category: "japan" },
@@ -76,19 +76,6 @@ function Foreign({ stepStatus, setStepStatus }) {
 		{ text: "사이판", id: "saipan", category: "southPacific" },
 	];
 
-	// const { handleClick } = useStep(setStepStatus);
-	// const handleClick = (id) => {
-	// 	setStepStatus((prevState) => {
-	// 		return {
-	// 			...prevState,
-	// 			canNext: true,
-	// 			option: {
-	// 				...prevState.option,
-	// 				two: id,
-	// 			},
-	// 		};
-	// 	});
-	// };
 	return (
 		<>
 			<div className="container_textbox">
@@ -110,13 +97,11 @@ function Foreign({ stepStatus, setStepStatus }) {
 						.map((city, index) => {
 							return (
 								<Button
-									handleClick={handleClick}
+									handleClick={handleSingleClick}
 									key={city.id}
 									text={city.text}
 									id={city.id}
-									active={
-										getCurrentId(stepStatus) === city.id
-									}
+									active={isSingleSelected(city.id)}
 								/>
 							);
 						})}
@@ -129,13 +114,11 @@ function Foreign({ stepStatus, setStepStatus }) {
 						.map((city, index) => {
 							return (
 								<Button
-									handleClick={handleClick}
+									handleClick={handleSingleClick}
 									Key={city.id}
 									text={city.text}
 									id={city.id}
-									active={
-										getCurrentId(stepStatus) === city.id
-									}
+									active={isSingleSelected(city.id)}
 								/>
 							);
 						})}
@@ -149,13 +132,11 @@ function Foreign({ stepStatus, setStepStatus }) {
 						.map((city, index) => {
 							return (
 								<Button
-									handleClick={handleClick}
+									handleClick={handleSingleClick}
 									Key={city.id}
 									text={city.text}
 									id={city.id}
-									active={
-										getCurrentId(stepStatus) === city.id
-									}
+									active={isSingleSelected(city.id)}
 								/>
 							);
 						})}
@@ -169,13 +150,11 @@ function Foreign({ stepStatus, setStepStatus }) {
 						.map((city, index) => {
 							return (
 								<Button
-									handleClick={handleClick}
+									handleClick={handleSingleClick}
 									Key={city.id}
 									text={city.text}
 									id={city.id}
-									active={
-										getCurrentId(stepStatus) === city.id
-									}
+									active={isSingleSelected(city.id)}
 								/>
 							);
 						})}
@@ -189,13 +168,11 @@ function Foreign({ stepStatus, setStepStatus }) {
 						.map((city, index) => {
 							return (
 								<Button
-									handleClick={handleClick}
+									handleClick={handleSingleClick}
 									key={city.id}
 									text={city.text}
 									id={city.id}
-									active={
-										getCurrentId(stepStatus) === city.id
-									}
+									active={isSingleSelected(city.id)}
 								/>
 							);
 						})}
@@ -209,13 +186,11 @@ function Foreign({ stepStatus, setStepStatus }) {
 						.map((city, index) => {
 							return (
 								<Button
-									handleClick={handleClick}
+									handleClick={handleSingleClick}
 									key={city.id}
 									text={city.text}
 									id={city.id}
-									active={
-										getCurrentId(stepStatus) === city.id
-									}
+									active={isSingleSelected(city.id)}
 								/>
 							);
 						})}
@@ -229,13 +204,11 @@ function Foreign({ stepStatus, setStepStatus }) {
 						.map((city, index) => {
 							return (
 								<Button
-									handleClick={handleClick}
+									handleClick={handleSingleClick}
 									key={city.id}
 									text={city.text}
 									id={city.id}
-									active={
-										getCurrentId(stepStatus) === city.id
-									}
+									active={isSingleSelected(city.id)}
 								/>
 							);
 						})}

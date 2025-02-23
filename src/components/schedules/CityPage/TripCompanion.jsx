@@ -1,9 +1,9 @@
-import React from "react";
+import Style from "@styles/TripCompanion.css";
 import Button from "@common/CityPage/Button";
-import useStep from "@hooks/useStep";
+import usePlan from "@store/usePlan";
 
-function TripCompanion({ stepStatus, setStepStatus }) {
-	const { handleClick, getCurrentId } = useStep(setStepStatus);
+function TripCompanion() {
+	const { handleMultiClick, isMultiSelected } = usePlan();
 	return (
 		<>
 			<div className="container_textbox">
@@ -15,38 +15,38 @@ function TripCompanion({ stepStatus, setStepStatus }) {
 				<Button
 					text="혼자"
 					id="alone"
-					handleClick={handleClick}
-					active={getCurrentId(stepStatus) === "alone"}
+					handleClick={handleMultiClick}
+					active={isMultiSelected("alone")}
 				/>
 				<Button
 					text="친구와"
 					id="friend"
-					handleClick={handleClick}
-					active={getCurrentId(stepStatus) === "friend"}
+					handleClick={handleMultiClick}
+					active={isMultiSelected("friend")}
 				/>
 				<Button
 					text="연인or배우자와"
 					id="couple"
-					handleClick={handleClick}
-					active={getCurrentId(stepStatus) === "couple"}
+					handleClick={handleMultiClick}
+					active={isMultiSelected("couple")}
 				/>
 				<Button
 					text="아이와"
 					id="child"
-					handleClick={handleClick}
-					active={getCurrentId(stepStatus) === "child"}
+					handleClick={handleMultiClick}
+					active={isMultiSelected("child")}
 				/>
 				<Button
 					text="부모님과"
 					id="parents"
-					handleClick={handleClick}
-					active={getCurrentId(stepStatus) === "parents"}
+					handleClick={handleMultiClick}
+					active={isMultiSelected("parents")}
 				/>
 				<Button
 					text="기타"
 					id="other"
-					handleClick={handleClick}
-					active={getCurrentId(stepStatus) === "other"}
+					handleClick={handleMultiClick}
+					active={isMultiSelected("other")}
 				/>
 			</div>
 		</>

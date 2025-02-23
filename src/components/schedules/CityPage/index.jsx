@@ -1,14 +1,13 @@
 import { useState } from "react";
-// import CityProgress from "./CityProgress";
-// import CityProgress from "../../../common/CityPage/CityProgress"
 import CityProgress from "@common/CityPage/CityProgress";
 import CityNextButton from "@common/CityPage/CityNextButton";
 import CityContents from "./CityContents";
 import { useEffect } from "react";
+import usePlan from "@store/usePlan";
 
 function CityPage() {
-	// const [progressState, setProgressState] = useState(1)
-	// const [canNextState, setCanNextState] = useState(false)
+	const { progress, canNext, selections } = usePlan();
+
 	const [stepStatus, setStepStatus] = useState({
 		progress: 1,
 		canNext: false,
@@ -17,24 +16,21 @@ function CityPage() {
 			two: null,
 			three: null,
 			four: null,
-			five: null,
+			five: null, // string || Array
 			six: null,
 		}, // 각 단계별 객체로 받을 것
 	});
 	useEffect(() => {
-		console.log(`[Debug] stepStatus: ${JSON.stringify(stepStatus)}`);
-	}, [stepStatus]);
+		console.log(`[Debug] usePlan : 
+			progress : ${progress}
+			canNext : ${canNext}
+			selection : ${JSON.stringify(selections)}`);
+	}, [progress, canNext, selections]);
 	return (
 		<div className="main-container">
-			<CityProgress stepStatus={stepStatus} />
-			<CityContents
-				stepStatus={stepStatus}
-				setStepStatus={setStepStatus}
-			/>
-			<CityNextButton
-				setStepStatus={setStepStatus}
-				stepStatus={stepStatus}
-			/>
+			<CityProgress />
+			<CityContents />
+			<CityNextButton />
 		</div>
 	);
 }
