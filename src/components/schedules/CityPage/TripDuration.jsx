@@ -1,10 +1,9 @@
-import React from "react";
-// import Style from "../../../styles/TripDuration.module.css";
+import Style from "@styles/TripDuration.css";
 import Button from "@common/CityPage/Button";
-import useStep from "@hooks/useStep";
+import usePlan from "@store/usePlan";
 
-function TripDuration({ stepStatus, setStepStatus }) {
-	const { handleClick, getCurrentId } = useStep(setStepStatus);
+function TripDuration() {
+	const { handleSingleClick, isSingleSelected } = usePlan();
 
 	return (
 		<>
@@ -22,38 +21,38 @@ function TripDuration({ stepStatus, setStepStatus }) {
 					<Button
 						text="당일치기"
 						id="daytrip"
-						handleClick={handleClick}
-						active={getCurrentId(stepStatus) === "daytrip"}
+						handleClick={handleSingleClick}
+						active={isSingleSelected("daytrip")}
 					/>
 					<Button
 						text="1박2일"
 						id="overnight_trip"
-						handleClick={handleClick}
-						active={getCurrentId(stepStatus) === "overnight_trip"}
+						handleClick={handleSingleClick}
+						active={isSingleSelected("overnight_trip")}
 					/>
 					<Button
 						text="2박3일"
 						id="2night_3day"
-						handleClick={handleClick}
-						active={getCurrentId(stepStatus) === "2night_3day"}
+						handleClick={handleSingleClick}
+						active={isSingleSelected("2night_3day")}
 					/>
 					<Button
 						text="3박4일"
 						id="3night_4day"
-						handleClick={handleClick}
-						active={getCurrentId(stepStatus) === "3night_4day"}
+						handleClick={handleSingleClick}
+						active={isSingleSelected("3night_4day")}
 					/>
 					<Button
 						text="4박5일"
 						id="4night_5day"
-						handleClick={handleClick}
-						active={getCurrentId(stepStatus) === "4night_5day"}
+						handleClick={handleSingleClick}
+						active={isSingleSelected("4night_5day")}
 					/>
 					<Button
 						text="5박6일"
 						id="5night_6day"
-						handleClick={handleClick}
-						active={getCurrentId(stepStatus) === "5night_6day"}
+						handleClick={handleSingleClick}
+						active={isSingleSelected("5night_6day")}
 					/>
 				</div>
 			</div>

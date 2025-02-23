@@ -1,6 +1,7 @@
-import react from "react";
+import React from "react";
 import Header from "../../Header";
 import Style from "./Loginstyle";
+
 function Login() {
 	return (
 		<>
@@ -38,7 +39,7 @@ function Login() {
 						</form>
 						<div className="saveid-btn">
 							<input type="checkbox" name="saveid" id="saveid" />
-							<label for="saveid">아이디저장</label>
+							<label Htmlfor="saveid">아이디저장</label>
 						</div>
 						<div className="login-btn">
 							<button

@@ -8,6 +8,7 @@ module.exports = {
 			"@common": path.resolve(__dirname, "src/common"),
 			"@styles": path.resolve(__dirname, "src/styles"),
 			"@hooks": path.resolve(__dirname, "src/hooks"),
+			"@store": path.resolve(__dirname, "src/store"),
 		},
 	},
 };

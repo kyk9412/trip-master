@@ -1,9 +1,13 @@
+// import Style from "@styles/TripSelection.css";
 import Button from "@common/CityPage/Button";
-import useStep from "@hooks/useStep";
+import usePlan from "@store/usePlan";
 
-function TripSelection({ stepStatus, setStepStatus }) {
-	const { handleClick, getCurrentId } = useStep(setStepStatus);
-	const currentId = getCurrentId(stepStatus);
+function TripSelection() {
+	const { handleSingleClick, isSingleSelected } = usePlan();
+	const key = {
+		domestic: "domestic",
+		foreign: "foreign",
+	};
 
 	return (
 		<>
@@ -23,14 +27,14 @@ function TripSelection({ stepStatus, setStepStatus }) {
 				<Button
 					text="국내"
 					id="domestic"
-					active={currentId === "domestic"}
-					handleClick={handleClick}
+					active={isSingleSelected(key.domestic)}
+					handleClick={handleSingleClick}
 				/>
 				<Button
 					text="해외"
-					id="foreignCountry"
-					active={currentId === "foreignCountry"}
-					handleClick={handleClick}
+					id="foreign"
+					active={isSingleSelected(key.foreign)}
+					handleClick={handleSingleClick}
 				/>
 			</div>
 		</>

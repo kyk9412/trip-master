@@ -1,25 +1,21 @@
-function CityNextButton({ setStepStatus, stepStatus }) {
+import usePlan from "@store/usePlan";
+
+function CityNextButton() {
+	const { canNext, setNextProgress, setCanNext } = usePlan();
+
 	const handleClick = () => {
-		if (!stepStatus.canNext) {
+		if (!canNext) {
 			alert("이동할 수 없습니다.");
 			return;
 		}
 
-		setStepStatus((prev) => {
-			return {
-				...prev,
-				progress: prev.progress + 1,
-				canNext: false,
-			};
-		});
+		setNextProgress();
+		setCanNext(false);
 	};
+
 	return (
 		<div
-			className={
-				stepStatus.canNext
-					? "city-next-button active"
-					: "city-next-button"
-			}
+			className={canNext ? "city-next-button active" : "city-next-button"}
 		>
 			<button onClick={handleClick} type="button">
 				다음

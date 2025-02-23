@@ -1,4 +1,4 @@
-import { NavLink, useNavigate } from "react-router";
+import { useNavigate } from "react-router";
 
 function Nav({ modalState, setModalState }) {
 	console.log("modalState", modalState);
