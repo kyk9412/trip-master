@@ -16,12 +16,4 @@ function ScheduleButton({ text = 'text', to }) {
   );
 }
 
-// function ScheduleButton({ text = "text", onClick }) {
-// 	return (
-// 		<button className="schedule-btn" onClick={onClick}>
-// 			<span className="schedule-btn__text">{text}</span>
-// 		</button>
-// 	);
-// }
-
 export default ScheduleButton;
