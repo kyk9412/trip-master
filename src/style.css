@@ -57,8 +57,7 @@ header .header_inner {
   letter-spacing: 1px;
   color: #fff;
 }
-.header_inner .logo img {
-}
+
 .logo.black {
   filter: brightness(0);
 }

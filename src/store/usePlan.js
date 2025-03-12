@@ -25,8 +25,12 @@ const createActions = (set, get) => ({
       progress: prevState.progress - 1,
       canNext: true,
     })),
-  setCanNext: (canNext) => {
-    set({ canNext });
+
+  setCanNext: () => {
+    set((prevState) => ({
+      ...prevState,
+      canNext: true,
+    }));
   },
   setSelections: (selections) => {
     set({ selections });

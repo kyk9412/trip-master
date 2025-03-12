@@ -14,6 +14,39 @@ const SubContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: 100px;
+`;
+
+const Logo = styled.h1`
+  position: absolute;
+  top: 10px;
+  left: 150px;
+  font-size: 19px;
+  font-family: 'Nanum Gothic', sans-serif;
+  font-weight: 800;
+  letter-spacing: 1px;
+  color: #fff;
+`;
+
+const ContainerTextbox = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 2rem;
+`;
+const Title = styled.div`
+  font-size: 1.8rem;
+  font-weight: 600;
+  line-height: 1.2;
+  color: #333;
+  margin-bottom: 1rem;
+`;
+const Text = styled.div`
+  font-size: 1rem;
+  font-weight: 400;
+  color: #a2a1a1;
 `;
 
 const Button = styled.button`
@@ -62,19 +95,23 @@ function Schedule() {
       </SubContainer>
       <SubContainer>
         <div className="header_inner">
-          <h1 className="logo black" onClick={handleClick}>
-            <a href="">TRIPLIBERTY</a>
-          </h1>
+          <Logo>
+            <h1 className="logo black" onClick={handleClick}>
+              <a href="">TRIPLIBERTY</a>
+            </h1>
+          </Logo>
         </div>
         <div className="main-wrap">
-          <div className="container_textbox">
-            <div className="title">
+          <ContainerTextbox>
+            <Title>
               취향에 맞게 일정을
               <br />
               추천해 드려요!
+            </Title>
+            <div className="text">
+              <Text>순식간에 여행 준비 끝</Text>
             </div>
-            <div className="text">순식간에 여행 준비 끝</div>
-          </div>
+          </ContainerTextbox>
 
           <div className="main-visual">
             <img src="images/schedules/main-visual.png" alt="" />
