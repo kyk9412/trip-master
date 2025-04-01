@@ -91,7 +91,7 @@ const useGemini = () => {
         setLoading(true);
 
         // 이미지 생성 코드
-        const responseImage = await model.generateContent(prompt);
+        const responseImage = await imageModel.generateContent(contents);
         for (const part of responseImage.response.candidates[0].content.parts) {
           if (part.text) {
             console.log(part.text);

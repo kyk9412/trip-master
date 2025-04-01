@@ -17,6 +17,22 @@ const SubContainer = styled.div`
   margin-top: 100px;
 `;
 
+const SubTitle = styled.h3`
+  font-family: 'Nanum Gothic', sans-serif;
+  font-size: 18px;
+  color: #3b90f9;
+  font-weight: bold;
+  animation: FadeInTitle 1s ease 0.75s forwards;
+`;
+const MainTitle = styled.h2`
+  font-family: 'Nanum Gothic', sans-serif;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 60px;
+  margin-top: 20px;
+  animation: FadeInTitle 1s ease 0.75s forwards;
+`;
+
 const Logo = styled.h1`
   position: absolute;
   top: 10px;
@@ -74,12 +90,12 @@ function Schedule() {
     <MainContainer>
       <SubContainer>
         <div className="schedule-textbox">
-          <h3 className="subTitle">일정 생성 관리</h3>
-          <h2 className="bigTitle">
+          <SubTitle>일정 생성 관리</SubTitle>
+          <MainTitle>
             나만의 여행 일정,
             <br />
             AI로 간편해졌어요
-          </h2>
+          </MainTitle>
         </div>
 
         <div className="schedule_content_img">
