@@ -1,70 +1,79 @@
-# Getting Started with Create React App
+트립 플래너 (Trip Planner)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+📌 프로젝트 소개
 
-## Available Scripts
+여행 일정을 효컿적으로 계획하고 관리할 수 있는 React 기반 웹 애플리케이션입니다. Gemini API를 활용한 AI 추천 시스템과 직관적인 UI/UX를 통해 사용자 경험을 최적화했습니다.
 
-In the project directory, you can run:
+🔗 데모 링크 | 📹 시연 영상
 
-### `npm start`
+✨ 주요 기능
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+AI 기반 여행 추천: Gemini API를 활용하여 사용자 선호도 기반 맞춤형 여행지 추천
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+일정 자동 생성: 선택한 여행지에 대한 최적화된 일정 자동 생성
 
-### `npm test`
+일정 커스터마이징: 드래그 앤 드롭으로 일정 순서 변경 및 세부 정보 편집
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) htmlFor more inhtmlFormation.
+오프라인 지원: 로컬 스토리지 연동으로 오프라인 상태에서도 작업 가능
 
-### `npm run build`
+반응형 디자인: 모바일부터 데스크탑까지 모든 디바이스에서 최적화된 경험 제공
 
-Builds the app htmlFor production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build htmlFor the best perhtmlFormance.
+🖼️ 스크린샷
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+🛠️ 기술 스택
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) htmlFor more inhtmlFormation.
+추가 라이브러리
 
-### `npm run eject`
+@google/generative-ai: Gemini API 통합
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+react-router-dom: 라우팅 관리
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+styled-components: 컴포넌트 스타일링
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+zustand: 상태 관리
 
-You don't have to ever use `eject`. The curated feature set is suitable htmlFor small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready htmlFor it.
+@craco/craco: Create React App 설정 커스터마이징
 
-## Learn More
+🧠 기술적 도전 및 해결 방법
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+성능 최적화:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+컴포넌트 메모이제이션 및 가상 스크롤 기법 적용으로 대규모 일정 데이터 처리 최적화
 
-### Code Splitting
+이미지 레이지 로딩 구현으로 초기 로딩 시간 단축
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+컴포넌트 재설계:
 
-### Analyzing the Bundle Size
+재사용성과 유지보수성을 높이기 위한 컴포넌트 구조 설계
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+공통 UI 요소를 추상화하여 일관된 사용자 경험 제공
 
-### Making a Progressive Web App
+기능별 관심사 분리를 통한 코드 가독성 향상
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+일관된 네이밍 컨벤션과 폴더 구조 적용으로 유지보수성 강화
 
-### Advanced Configuration
+코드 품질 개선:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+명확한 컴포넌트 명명 규칙 적용으로 코드 탐색 용이성 향상
 
-### Deployment
+파일 및 함수 구조의 일관성 유지로 팀 협업 효율성 증대
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+주석 및 문서화를 통한 코드 이해도 향상
 
-### `npm run build` fails to minify
+상태 관리 최적화:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Zustand를 활용한 전역 상태 관리로 컴포넌트 간 데이터 공유 간소화
+
+스토어를 통한 자유로운 상태 접근 및 업데이트로 props drilling 문제 해결
+
+복잡한 상태 업데이트 로직을 미들웨어로 분리하여 관리
+
+상태 동기화:
+
+Zustand와 로컬 스토리지를 연동하여 오프라인 상태에서도 작업 지속 가능
+
+UI/UX 개선:
+
+스켈레톤 로딩, 애니메이션 효과 등을 통해 사용자 경험 향상
+
+접근성 고려한 디자인 및 키보드 네비게이션 지원
