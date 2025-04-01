@@ -22,7 +22,7 @@ AI 기반 여행 추천: Gemini API를 활용하여 사용자 선호도 기반 �
 
 ## 🛠️ 기술 스택
 
-추가 라이브러리
+## 추가 라이브러리
 
 @google/generative-ai: Gemini API 통합
 
@@ -34,7 +34,7 @@ zustand: 상태 관리
 
 @craco/craco: Create React App 설정 커스터마이징
 
-🧠 기술적 도전 및 해결 방법
+## 🧠 기술적 도전 및 해결 방법
 
 성능 최적화:
 
