@@ -13,7 +13,6 @@ function Main() {
         <div className="main-wrap home">
           <div className="schedule-btn-container">
             <ScheduleButton text="AI 추천 일정보기" onClick={handleOnClick} to="/schedule" />
-            <ScheduleButton text="즉시 투어 가이드" onClick={handleOnClick} to="/components/TripDetails" />
           </div>
         </div>
       </section>

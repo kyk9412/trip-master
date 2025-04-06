@@ -24,13 +24,37 @@ const SubTitle = styled.h3`
   font-weight: bold;
   animation: FadeInTitle 1s ease 0.75s forwards;
 `;
+
 const MainTitle = styled.h2`
   font-family: 'Nanum Gothic', sans-serif;
   font-weight: 700;
-  font-size: 48px;
+  font-size: 45px;
   line-height: 60px;
   margin-top: 20px;
   animation: FadeInTitle 1s ease 0.75s forwards;
+`;
+
+const BottomText = styled.div`
+  padding-top: 180px;
+  padding-left: 50px;
+  margin-bottom: 300px;
+  animation: FadeInSub 1.3s ease 0.95s forwards;
+`;
+const BottomDescription = styled.p`
+  font-size: 23px;
+  font-weight: bold;
+  color: #474747;
+  margin-bottom: 25px;
+  letter-spacing: -1px;
+`;
+const BottomTitle = styled.h3`
+  font-family: 'Nanum Gothic', sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 30px;
+  word-break: keep-all;
+  color: #787878;
+  margin-bottom: 35px;
 `;
 
 const Logo = styled.h1`
@@ -99,14 +123,14 @@ function Schedule() {
         </div>
 
         <div className="schedule_content_img">
-          <div className="bottom_text">
-            <p>어떤 취향이든, 다 맞춰주니까</p>
-            <h3 className="bottom_title">
+          <BottomText>
+            <BottomDescription>어떤 취향이든, 다 맞춰주니까</BottomDescription>
+            <BottomTitle>
               어떤 여행 취향이든 간단히 알려만 주세요.
               <br />
               AI는 여러분의 취향에 꼭 맞는 일정을 추천해 드립니다.
-            </h3>
-          </div>
+            </BottomTitle>
+          </BottomText>
         </div>
       </SubContainer>
       <SubContainer>

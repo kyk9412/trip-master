@@ -1,5 +1,4 @@
 import './style.css';
-import './schedule.css';
 import './common.css';
 import Nav from './components/Nav';
 import Header from './components/Header';
