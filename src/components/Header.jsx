@@ -18,15 +18,6 @@ function Header({ setModalState }) {
         <h1 className="logo" onClick={handleClick}>
           <a href="">TRIPLIBERTY</a>
         </h1>
-        <div className="header-right-menu">
-          <button onClick={handleButtonClick} className="btn-open" type="button">
-            <div className="hamburger">
-              <span className="hamburger_bar"></span>
-              <span className="hamburger_bar"></span>
-              <span className="hamburger_bar"></span>
-            </div>
-          </button>
-        </div>
       </div>
     </header>
   );

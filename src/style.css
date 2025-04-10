@@ -51,11 +51,17 @@ header .header_inner {
   position: absolute;
   top: 20px;
   left: 20px;
-  font-size: 19px;
+  font-size: 2rem;
   font-family: 'Nanum Gothic', sans-serif;
   font-weight: 800;
   letter-spacing: 1px;
   color: #fff;
+  text-shadow:
+    rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px,
+    rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px,
+    rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 
 .logo.black {
@@ -175,26 +181,10 @@ header .header_inner {
     opacity: 1;
   }
 }
-main {
-}
-.main-container {
-  position: relative;
-  top: 0;
-  left: 0;
-}
-.main-container .main-wrap.home {
+.schedule-container {
   width: 100%;
   height: 100vh;
-  background-image: url(../public/images/main.jpg);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
-.main-container .main-wrap img {
-  width: 100%;
-  height: 100%;
-  font-size: 0;
+  overflow: auto;
 }
 .main-wrap .main_textbox {
   max-width: 350px;
@@ -215,7 +205,7 @@ main {
   left: 280px;
 }
 
-.schedule-textbox .subTitle {
+/* .schedule-textbox .subTitle {
   font-family: 'Nanum Gothic', sans-serif;
   font-size: 18px;
   color: #3b90f9;
@@ -229,7 +219,7 @@ main {
   line-height: 60px;
   margin-top: 20px;
   animation: FadeInTitle 1s ease 0.75s forwards;
-}
+} */
 @keyframes FadeInTitle {
   0% {
     opacity: 0;
@@ -245,27 +235,7 @@ main {
   position: relative;
   display: flex;
 }
-.schedule_content_img .bottom_text {
-  padding-top: 200px;
-  margin-bottom: 300px;
-  animation: FadeInSub 1.3s ease 0.95s forwards;
-}
-.schedule_content_img .bottom_text p {
-  font-size: 24px;
-  font-weight: bold;
-  color: #474747;
-  margin-bottom: 25px;
-  letter-spacing: -1px;
-}
-.schedule_content_img .bottom_text .bottom_title {
-  font-family: 'Nanum Gothic', sans-serif;
-  font-weight: 400;
-  font-size: 20px;
-  line-height: 35px;
-  word-break: keep-all;
-  color: #787878;
-  margin-bottom: 35px;
-}
+
 .schedule_content_img .schedule_imgbox {
   position: absolute;
   top: 0;
@@ -389,8 +359,7 @@ main {
   text-align: center;
   margin-top: 30px;
 }
-.popup-container .popup-content .popup-description p {
-}
+
 .popup-container .popup-content .popup-description .popup-notice {
   line-height: 24px;
 }
@@ -415,18 +384,6 @@ main {
   line-height: 40px;
 }
 
-.main-container {
-  width: 100%;
-  height: 100%;
-}
-.main-container .main-wrap {
-  margin: 0 auto;
-}
-.main-wrap .container_textbox {
-  font-family: 'Nanum Gothic', sans-serif;
-  text-align: center;
-  margin-top: 70px;
-}
 .container_textbox .title {
   font-size: 30px;
   line-height: 36px;

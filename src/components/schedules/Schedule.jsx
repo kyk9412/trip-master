@@ -59,13 +59,19 @@ const BottomTitle = styled.h3`
 
 const Logo = styled.h1`
   position: absolute;
-  top: 10px;
-  left: 150px;
-  font-size: 19px;
+  top: 20px;
+  left: 170px;
+  font-size: 2rem;
   font-family: 'Nanum Gothic', sans-serif;
   font-weight: 800;
   letter-spacing: 1px;
-  color: #fff;
+  color: #000;
+  text-shadow:
+    rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px,
+    rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px,
+    rgba(0, 0, 0, 0.09) 0px -3px 5px;
 `;
 
 const ContainerTextbox = styled.div`
@@ -107,11 +113,17 @@ const Button = styled.button`
 function Schedule() {
   const navigate = useNavigate();
 
+  const handleOnClick = () => {
+    navigate('/');
+  };
+
   function handleClick() {
     navigate('/schedule/citypage');
   }
   return (
     <MainContainer>
+      <Logo onClick={handleOnClick}>TRIPLIBERTY</Logo>
+
       <SubContainer>
         <div className="schedule-textbox">
           <SubTitle>일정 생성 관리</SubTitle>
@@ -133,31 +145,24 @@ function Schedule() {
           </BottomText>
         </div>
       </SubContainer>
-      <SubContainer>
-        <div className="header_inner">
-          <Logo>
-            <h1 className="logo black" onClick={handleClick}>
-              <a href="">TRIPLIBERTY</a>
-            </h1>
-          </Logo>
-        </div>
-        <div className="main-wrap">
-          <ContainerTextbox>
-            <Title>
-              취향에 맞게 일정을
-              <br />
-              추천해 드려요!
-            </Title>
-            <div className="text">
-              <Text>순식간에 여행 준비 끝</Text>
-            </div>
-          </ContainerTextbox>
 
-          <div className="main-visual">
-            <img src="images/schedules/main-visual.png" alt="" />
+      <SubContainer>
+        <ContainerTextbox>
+          <Title>
+            취향에 맞게 일정을
+            <br />
+            추천해 드려요!
+          </Title>
+          <div className="text">
+            <Text>순식간에 여행 준비 끝</Text>
           </div>
+        </ContainerTextbox>
+
+        <div className="main-visual">
+          <img src="images/schedules/main-visual.png" alt="" />
         </div>
       </SubContainer>
+
       <Button onClick={handleClick}>AI 추천 일정보기</Button>
     </MainContainer>
   );
