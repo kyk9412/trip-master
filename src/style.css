@@ -205,21 +205,6 @@ header .header_inner {
   left: 280px;
 }
 
-/* .schedule-textbox .subTitle {
-  font-family: 'Nanum Gothic', sans-serif;
-  font-size: 18px;
-  color: #3b90f9;
-  font-weight: bold;
-  animation: FadeInTitle 1s ease 0.75s forwards;
-}
-.schedule-textbox .bigTitle {
-  font-family: 'Nanum Gothic', sans-serif;
-  font-weight: 700;
-  font-size: 48px;
-  line-height: 60px;
-  margin-top: 20px;
-  animation: FadeInTitle 1s ease 0.75s forwards;
-} */
 @keyframes FadeInTitle {
   0% {
     opacity: 0;
@@ -384,19 +369,6 @@ header .header_inner {
   line-height: 40px;
 }
 
-.container_textbox .title {
-  font-size: 30px;
-  line-height: 36px;
-  font-weight: 700;
-  color: #232323;
-  margin-top: 15px;
-  padding-bottom: 10px;
-}
-.container_textbox .text {
-  font-size: 15px;
-  font-weight: 400;
-  color: #787878;
-}
 .main-wrap .city {
   width: 800px;
   height: 100%;

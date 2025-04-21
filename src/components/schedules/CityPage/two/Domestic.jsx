@@ -1,4 +1,3 @@
-import Style from './DomesticStyle';
 import Button from '@common/CityPage/Button';
 import usePlan from '@store/usePlan';
 import ButtonWrapper, { ContainerTextbox, Title, Text, Wrapper, Image } from '@common/CityPage/ButtonWrapper';

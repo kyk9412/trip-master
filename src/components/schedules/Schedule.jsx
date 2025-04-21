@@ -100,7 +100,7 @@ const Logo = styled.h1`
   position: absolute;
   top: 20px;
   left: 170px;
-  font-size: 2rem;
+  font-size: 32px;
   font-family: 'Nanum Gothic', sans-serif;
   font-weight: 800;
   letter-spacing: 1px;
@@ -114,7 +114,7 @@ const Logo = styled.h1`
 
   @media (max-width: 1100px) {
     left: 20px;
-    font-size: 1.5rem;
+    font-size: 24px;
   }
 `;
 
@@ -128,21 +128,21 @@ const ContainerTextbox = styled.div`
 `;
 
 const Title = styled.div`
-  font-size: 1.8rem;
+  font-size: 28px; //1.8rem
   font-weight: 600;
   line-height: 1.2;
-  color: #333;
+  color: #232323;
   margin-bottom: 1rem;
 
   @media (max-width: 1100px) {
-    font-size: 1.4rem;
+    font-size: 22.5px;
   }
 `;
 
 const Text = styled.div`
-  font-size: 1rem;
+  font-size: 17px; //1rem
   font-weight: 400;
-  color: #a2a1a1;
+  color: #787878;
 `;
 
 const ScheduleImage = styled.div`
@@ -179,7 +179,7 @@ const Button = styled.button`
     height: 35px;
     position: static;
     margin: 2rem auto 1rem;
-    font-size: 0.9rem;
+    font-size: 14.5px;
   }
 `;
 

@@ -13,6 +13,10 @@ const Title = styled.h1`
   color: #232323;
   margin-top: 15px;
   padding-bottom: 10px;
+
+  @media (max-width: 1100px) {
+    font-size: 27px;
+  }
 `;
 
 const Text = styled.p`
@@ -41,11 +45,17 @@ const Image = styled.img`
 
 const TitleText = styled.div`
   position: absolute;
-  top: -2rem;
+  top: -32px;
   left: 0;
   font-size: 15px;
   font-weight: 400;
   color: #787878;
+
+  @media (max-width: 1100px) {
+    position: absolute;
+    top: -32px;
+    left: 45px;
+  }
 `;
 
 function ButtonWrapper({ children, direction = 'row', titleText }) {
