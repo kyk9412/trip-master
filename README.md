@@ -24,7 +24,7 @@
   <tr>
     <td><img src="./public/images/mainScreen.png" alt="메인화면"/></td>
     <td><img src="./public/images/scheduleScreen.png" alt="일정계획"/></td>
-    <td><img src="./public/images/AISuggestionScreen.png" alt="AI추천"/></td>
+    <td><img src="./public/images/AiSuggestionScreen.png" alt="AI추천"/></td>
   </tr>
 </table>
 
