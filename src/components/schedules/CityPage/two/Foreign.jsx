@@ -84,132 +84,118 @@ function Foreign() {
         <Text>1곳을 선택해주세요.</Text>
       </ContainerTextbox>
 
-      <div className="foreign">
-        <div className="foreign_area">
-          <ButtonWrapper titleText="일본" direction="row">
-            {cityList
-              .filter(({ category }) => category === 'japan')
-              .map((city, index) => {
-                return (
-                  <Button
-                    handleClick={handleSingleClick}
-                    key={city.id}
-                    text={city.text}
-                    id={city.id}
-                    active={isSingleSelected(city.id)}
-                  />
-                );
-              })}
-          </ButtonWrapper>
-        </div>
+      <ButtonWrapper titleText="일본" direction="row">
+        {cityList
+          .filter(({ category }) => category === 'japan')
+          .map((city, index) => {
+            return (
+              <Button
+                handleClick={handleSingleClick}
+                key={city.id}
+                text={city.text}
+                id={city.id}
+                active={isSingleSelected(city.id)}
+              />
+            );
+          })}
+      </ButtonWrapper>
 
-        <div className="foreign_area">
-          <ButtonWrapper titleText="중화/중국" direction="row">
-            {cityList
-              .filter(({ category }) => category === 'china')
-              .map((city, index) => {
-                return (
-                  <Button
-                    handleClick={handleSingleClick}
-                    key={city.id}
-                    text={city.text}
-                    id={city.id}
-                    active={isSingleSelected(city.id)}
-                  />
-                );
-              })}
-          </ButtonWrapper>
-        </div>
+      <ButtonWrapper titleText="중화/중국" direction="row">
+        {cityList
+          .filter(({ category }) => category === 'china')
+          .map((city, index) => {
+            return (
+              <Button
+                handleClick={handleSingleClick}
+                key={city.id}
+                text={city.text}
+                id={city.id}
+                active={isSingleSelected(city.id)}
+              />
+            );
+          })}
+      </ButtonWrapper>
 
-        <div className="foreign_area">
-          <ButtonWrapper titleText="유럽" direction="row">
-            {cityList
-              .filter(({ category }) => category === 'europe')
-              .map((city, index) => {
-                return (
-                  <Button
-                    handleClick={handleSingleClick}
-                    key={city.id}
-                    text={city.text}
-                    id={city.id}
-                    active={isSingleSelected(city.id)}
-                  />
-                );
-              })}
-          </ButtonWrapper>
-        </div>
+      <ButtonWrapper titleText="유럽" direction="row">
+        {cityList
+          .filter(({ category }) => category === 'europe')
+          .map((city, index) => {
+            return (
+              <Button
+                handleClick={handleSingleClick}
+                key={city.id}
+                text={city.text}
+                id={city.id}
+                active={isSingleSelected(city.id)}
+              />
+            );
+          })}
+      </ButtonWrapper>
 
-        <div className="foreign_area">
-          <ButtonWrapper titleText="동남아시아" direction="row">
-            {cityList
-              .filter(({ category }) => category === 'southeastAsia')
-              .map((city, index) => {
-                return (
-                  <Button
-                    handleClick={handleSingleClick}
-                    key={city.id}
-                    text={city.text}
-                    id={city.id}
-                    active={isSingleSelected(city.id)}
-                  />
-                );
-              })}
-          </ButtonWrapper>
-        </div>
+      <ButtonWrapper titleText="동남아시아" direction="row">
+        {cityList
+          .filter(({ category }) => category === 'southeastAsia')
+          .map((city, index) => {
+            return (
+              <Button
+                handleClick={handleSingleClick}
+                key={city.id}
+                text={city.text}
+                id={city.id}
+                active={isSingleSelected(city.id)}
+              />
+            );
+          })}
+      </ButtonWrapper>
 
-        <div className="foreign_area">
-          <ButtonWrapper titleText="서아시아" direction="row">
-            {cityList
-              .filter(({ category }) => category === 'westAsia')
-              .map((city, index) => {
-                return (
-                  <Button
-                    handleClick={handleSingleClick}
-                    key={city.id}
-                    text={city.text}
-                    id={city.id}
-                    active={isSingleSelected(city.id)}
-                  />
-                );
-              })}
-          </ButtonWrapper>
-        </div>
+      <ButtonWrapper titleText="서아시아" direction="row">
+        {cityList
+          .filter(({ category }) => category === 'westAsia')
+          .map((city, index) => {
+            return (
+              <Button
+                handleClick={handleSingleClick}
+                key={city.id}
+                text={city.text}
+                id={city.id}
+                active={isSingleSelected(city.id)}
+              />
+            );
+          })}
+      </ButtonWrapper>
 
-        <div className="foreign_area">
-          <ButtonWrapper titleText="미국" direction="row">
-            {cityList
-              .filter(({ category }) => category === 'america')
-              .map((city, index) => {
-                return (
-                  <Button
-                    handleClick={handleSingleClick}
-                    key={city.id}
-                    text={city.text}
-                    id={city.id}
-                    active={isSingleSelected(city.id)}
-                  />
-                );
-              })}
-          </ButtonWrapper>
-        </div>
+      <ButtonWrapper titleText="미국" direction="row">
+        {cityList
+          .filter(({ category }) => category === 'america')
+          .map((city, index) => {
+            return (
+              <Button
+                handleClick={handleSingleClick}
+                key={city.id}
+                text={city.text}
+                id={city.id}
+                active={isSingleSelected(city.id)}
+              />
+            );
+          })}
+      </ButtonWrapper>
 
-        <div className="foreign_area" style={{ marginBottom: '100px' }}>
-          <ButtonWrapper titleText="남태평양" direction="row">
-            {cityList
-              .filter(({ category }) => category === 'southPacific')
-              .map((city, index) => {
-                return (
-                  <Button
-                    handleClick={handleSingleClick}
-                    key={city.id}
-                    text={city.text}
-                    id={city.id}
-                    active={isSingleSelected(city.id)}
-                  />
-                );
-              })}
-          </ButtonWrapper>
-        </div>
+      <div className="foreign_area" style={{ marginBottom: '100px' }}>
+        <ButtonWrapper titleText="남태평양" direction="row">
+          {cityList
+            .filter(({ category }) => category === 'southPacific')
+            .map((city, index) => {
+              return (
+                <Button
+                  handleClick={handleSingleClick}
+                  key={city.id}
+                  text={city.text}
+                  id={city.id}
+                  active={isSingleSelected(city.id)}
+                />
+              );
+            })}
+        </ButtonWrapper>
       </div>
     </>
   );

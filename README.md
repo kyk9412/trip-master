@@ -6,7 +6,9 @@
 
 여행 일정을 효율적으로 계획하고 관리할 수 있는 React 기반 웹 애플리케이션입니다. Gemini API를 활용한 AI 추천 시스템과 직관적인 UI/UX를 통해 사용자 경험을 최적화했습니다.
 
-[🔗 데모 링크](#) | [📹 시연 영상](#)
+[🔗 데모 링크](#) | [📹 시연 영상 보기 (권한 필요)](https://drive.google.com/file/d/1uJ8KyEQh_9b1RSrFIuqrJb-Nl_K9DShv/view?usp=drive_link)
+
+> ⚠️ 이 영상은 특정 사용자에게만 공개되어 있습니다. 접근 권한이 없는 경우 요청을 보내주세요.
 
 ## ✨ 주요 기능
 
@@ -20,9 +22,9 @@
 
 <table>
   <tr>
-    <td><img src="https://via.placeholder.com/250x500?text=메인화면" alt="메인화면"/></td>
-    <td><img src="https://via.placeholder.com/250x500?text=일정계획" alt="일정계획"/></td>
-    <td><img src="https://via.placeholder.com/250x500?text=AI추천" alt="AI추천"/></td>
+    <td><img src="./public/images/mainScreen.png" alt="메인화면"/></td>
+    <td><img src="./public/images/scheduleScreen.png" alt="일정계획"/></td>
+    <td><img src="./public/images/AISuggestionScreen.png" alt="AI추천"/></td>
   </tr>
 </table>
 

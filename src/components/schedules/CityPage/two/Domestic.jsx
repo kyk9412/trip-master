@@ -5,18 +5,18 @@ import ButtonWrapper, { ContainerTextbox, Title, Text, Wrapper, Image } from '@c
 function Domestic() {
   const { handleSingleClick, isSingleSelected } = usePlan();
   const cityList = [
-    { text: "가평'양평", id: 'gapyeong' },
-    { text: "강릉'속초", id: 'gangneung' },
-    { text: '경주', id: 'gyeongju' },
-    { text: '부산', id: 'busan' },
-    { text: '여수', id: 'yeosu' },
-    { text: '인천', id: 'incheon' },
-    { text: '전주', id: 'jeonju' },
-    { text: '제주', id: 'jeju' },
-    { text: "춘천'홍천", id: 'chuncheon' },
-    { text: '태안', id: 'taean' },
-    { text: "통영'거제'남해", id: 'tongyeong' },
-    { text: "포항'안동", id: 'pohang' },
+    { text: "가평'양평", id: 'gapyeong', category: 'korea' },
+    { text: "강릉'속초", id: 'gangneung', category: 'korea' },
+    { text: '경주', id: 'gyeongju', category: 'korea' },
+    { text: '부산', id: 'busan', category: 'korea' },
+    { text: '여수', id: 'yeosu', category: 'korea' },
+    { text: '인천', id: 'incheon', category: 'korea' },
+    { text: '전주', id: 'jeonju', category: 'korea' },
+    { text: '제주', id: 'jeju', category: 'korea' },
+    { text: "춘천'홍천", id: 'chuncheon', category: 'korea' },
+    { text: '태안', id: 'taean', category: 'korea' },
+    { text: "통영'거제'남해", id: 'tongyeong', category: 'korea' },
+    { text: "포항'안동", id: 'pohang', category: 'korea' },
   ];
 
   return (
@@ -27,19 +27,21 @@ function Domestic() {
         <Text>1곳을 선택해주세요.</Text>
       </ContainerTextbox>
 
-      <div className="korea">
+      <div className="foreign_area" style={{ marginBottom: '100px' }}>
         <ButtonWrapper titleText="대한민국" direction="row">
-          {cityList.map((city, index) => {
-            return (
-              <Button
-                key={city.id}
-                text={city.text}
-                id={city.id}
-                handleClick={handleSingleClick}
-                active={isSingleSelected(city.id)}
-              />
-            );
-          })}
+          {cityList
+            .filter(({ category }) => category === 'korea')
+            .map((city, index) => {
+              return (
+                <Button
+                  key={city.id}
+                  text={city.text}
+                  id={city.id}
+                  handleClick={handleSingleClick}
+                  active={isSingleSelected(city.id)}
+                />
+              );
+            })}
         </ButtonWrapper>
       </div>
     </>
