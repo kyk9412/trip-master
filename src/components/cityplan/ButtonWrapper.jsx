@@ -3,7 +3,7 @@ import styled from 'styled-components';
 const ContainerTextbox = styled.div`
   font-family: 'Nanum Gothic', sans-serif;
   text-align: center;
-  margin-top: 70px;
+  margin-top: 80px;
 `;
 
 const Title = styled.h1`

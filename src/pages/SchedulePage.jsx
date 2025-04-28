@@ -1,5 +1,17 @@
 import { useNavigate } from 'react-router';
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
+import Header from '@components/Header';
+
+const fadeInUp = keyframes`
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+`;
 
 const MainContainer = styled.div`
   width: 100%;
@@ -36,7 +48,7 @@ const SubTitle = styled.h3`
   font-size: 18px;
   color: #3b90f9;
   font-weight: bold;
-  animation: FadeInTitle 1s ease 0.75s forwards;
+  animation: ${fadeInUp} 1s ease 0.75s forwards;
 `;
 
 const MainTitle = styled.h2`
@@ -45,7 +57,7 @@ const MainTitle = styled.h2`
   font-size: 45px;
   line-height: 60px;
   margin-top: 20px;
-  animation: FadeInTitle 1s ease 0.75s forwards;
+  animation: ${fadeInUp} 1s ease 0.75s forwards;
 
   @media (max-width: 1100px) {
     font-size: 32px;
@@ -58,7 +70,7 @@ const BottomText = styled.div`
   padding-top: 180px;
   padding-left: 50px;
   margin-bottom: 300px;
-  animation: FadeInSub 1.3s ease 0.95s forwards;
+  animation: ${fadeInUp} 1s ease 0.75s forwards;
 
   @media (max-width: 1100px) {
     padding-top: 60px;
@@ -96,28 +108,6 @@ const BottomTitle = styled.h3`
   }
 `;
 
-const Logo = styled.h1`
-  position: absolute;
-  top: 20px;
-  left: 170px;
-  font-size: 32px;
-  font-family: 'Nanum Gothic', sans-serif;
-  font-weight: 800;
-  letter-spacing: 1px;
-  color: #000;
-  text-shadow:
-    rgba(0, 0, 0, 0.25) 0px 54px 55px,
-    rgba(0, 0, 0, 0.12) 0px -12px 30px,
-    rgba(0, 0, 0, 0.12) 0px 4px 6px,
-    rgba(0, 0, 0, 0.17) 0px 12px 13px,
-    rgba(0, 0, 0, 0.09) 0px -3px 5px;
-
-  @media (max-width: 1100px) {
-    left: 20px;
-    font-size: 24px;
-  }
-`;
-
 const ContainerTextbox = styled.div`
   display: flex;
   flex-direction: column;
@@ -125,6 +115,23 @@ const ContainerTextbox = styled.div`
   justify-content: center;
   text-align: center;
   padding: 2rem;
+  animation: ${fadeInUp} 1s ease 0.75s forwards;
+`;
+
+const ScheduleImage = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: ${fadeInUp} 1.2s ease 0.4s forwards;
+
+  img {
+    max-width: 100%;
+    height: auto;
+
+    @media (max-width: 1100px) {
+      width: 80%;
+    }
+  }
 `;
 
 const Title = styled.div`
@@ -143,21 +150,6 @@ const Text = styled.div`
   font-size: 17px; //1rem
   font-weight: 400;
   color: #787878;
-`;
-
-const ScheduleImage = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  img {
-    max-width: 100%;
-    height: auto;
-
-    @media (max-width: 1100px) {
-      width: 80%;
-    }
-  }
 `;
 
 const Button = styled.button`
@@ -183,62 +175,59 @@ const Button = styled.button`
   }
 `;
 
-function Schedule() {
+function SchedulePage() {
   const navigate = useNavigate();
 
-  const handleOnClick = () => {
-    navigate('/');
-  };
-
   function handleClick() {
-    navigate('/schedule/citypage');
+    navigate('/schedule/cityplan');
   }
   return (
-    <MainContainer>
-      <Logo onClick={handleOnClick}>TRIPLIBERTY</Logo>
-
-      <SubContainer>
-        <div className="schedule-textbox">
-          <SubTitle>일정 생성 관리</SubTitle>
-          <MainTitle>
-            나만의 여행 일정,
-            <br />
-            AI로 간편해졌어요
-          </MainTitle>
-        </div>
-
-        <div className="schedule_content_img">
-          <BottomText>
-            <BottomDescription>어떤 취향이든, 다 맞춰주니까</BottomDescription>
-            <BottomTitle>
-              어떤 여행 취향이든 간단히 알려만 주세요.
+    <>
+      <Header isBlack />
+      <MainContainer>
+        <SubContainer>
+          <div className="schedule-textbox">
+            <SubTitle>일정 생성 관리</SubTitle>
+            <MainTitle>
+              나만의 여행 일정,
               <br />
-              AI는 여러분의 취향에 꼭 맞는 일정을 추천해 드립니다.
-            </BottomTitle>
-          </BottomText>
-        </div>
-      </SubContainer>
-
-      <SubContainer>
-        <ContainerTextbox>
-          <Title>
-            취향에 맞게 일정을
-            <br />
-            추천해 드려요!
-          </Title>
-          <div className="text">
-            <Text>순식간에 여행 준비 끝</Text>
+              AI로 간편해졌어요
+            </MainTitle>
           </div>
-        </ContainerTextbox>
 
-        <ScheduleImage>
-          <img src="images/schedules/main-visual.png" alt="" />
-        </ScheduleImage>
-      </SubContainer>
+          <div className="schedule_content_img">
+            <BottomText>
+              <BottomDescription>어떤 취향이든, 다 맞춰주니까</BottomDescription>
+              <BottomTitle>
+                어떤 여행 취향이든 간단히 알려만 주세요.
+                <br />
+                AI는 여러분의 취향에 꼭 맞는 일정을 추천해 드립니다.
+              </BottomTitle>
+            </BottomText>
+          </div>
+        </SubContainer>
 
-      <Button onClick={handleClick}>AI 추천 일정보기</Button>
-    </MainContainer>
+        <SubContainer>
+          <ContainerTextbox>
+            <Title>
+              취향에 맞게 일정을
+              <br />
+              추천해 드려요!
+            </Title>
+            <div className="text">
+              <Text>순식간에 여행 준비 끝</Text>
+            </div>
+          </ContainerTextbox>
+
+          <ScheduleImage>
+            <img src="images/schedules/main-visual.png" alt="" />
+          </ScheduleImage>
+        </SubContainer>
+
+        <Button onClick={handleClick}>AI 추천 일정보기</Button>
+      </MainContainer>
+    </>
   );
 }
 
-export default Schedule;
+export default SchedulePage;
