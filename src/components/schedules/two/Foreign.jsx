@@ -1,4 +1,3 @@
-import Style from './ForeignStyle';
 import Button from '@components/cityplan/Button';
 import usePlan from '@store/usePlan';
 import ButtonWrapper, { ContainerTextbox, Title, Text, Wrapper, Image } from '@components/cityplan/ButtonWrapper';
@@ -194,7 +193,7 @@ function Foreign() {
           </ButtonWrapper>
         </div>
 
-        <div className="foreign_area">
+        <div className="foreign_area" style={{ marginBottom: '100px' }}>
           <ButtonWrapper titleText="남태평양" direction="row">
             {cityList
               .filter(({ category }) => category === 'southPacific')

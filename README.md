@@ -120,51 +120,68 @@ yarn build
 ## 🗂️ 프로젝트 구조
 
 ```
-├── node_modules/        # 프로젝트 의존성
-├── public/              # 정적 파일
-├── src/                 # 소스 코드
-│   ├── common/          # 공통 컴포넌트
-│   │   └── CityPage/    # 도시 페이지 관련 컴포넌트
-│   │       ├── Button.jsx
-│   │       ├── ButtonWrapper.jsx
-│   │       ├── CityBackButton.jsx
-│   │       ├── CityNextBtnStyle.jsx
-│   │       ├── CityNextButton.jsx
-│   │       ├── CityProgress.jsx
-│   │       ├── NavBarStyle.jsx
-│   │       ├── LoadingSpinner.jsx
-│   │       └── ScheduleButton.jsx
-│   ├── components/      # 기능별 컴포넌트
-│   │   └── schedules/   # 일정 관련 컴포넌트
-│   │       ├── CityPage/
-│   │       ├── login/
-│   │       ├── AIResult.jsx
-│   │       ├── Schedule.jsx
-│   │       └── Tourguide.jsx
+├── node_modules/                 # 프로젝트 의존성
+├── public/                       # 정적 파일
+├── src/                          # 소스 코드
+│   ├── common/                   # 공통 컴포넌트
+│   │   ├── LoadingSpinner.jsx
+│   │   └── ScheduleButton.jsx
+│
+│   ├── components/               # 기능별 컴포넌트
+│   │   ├── cityplan/             # 도시 관련 컴포넌트
+│   │   │   ├── Button.jsx
+│   │   │   ├── ButtonWrapper.jsx
+│   │   │   ├── CityBackButton.jsx
+│   │   │   ├── CityNextBtnStyle.jsx
+│   │   │   ├── CityNextButton.jsx
+│   │   │   ├── CityProgress.jsx
+│   │   │   └── NavBarStyle.jsx
+│   │   │
+│   │   ├── schedules/            # 일정 관련 컴포넌트
+│   │   │   ├── two/              # 일정 세부 구성 (국내/해외)
+│   │   │   │   ├── CityContentTwo.jsx
+│   │   │   │   ├── CityListByCategory.jsx
+│   │   │   │   ├── Domestic.jsx
+│   │   │   │   └── Foreign.jsx
+│   │   │   │
+│   │   │   ├── CityContents.jsx
+│   │   │   ├── TravelStyle.jsx
+│   │   │   ├── TripCompanion.jsx
+│   │   │   ├── TripDuration.jsx
+│   │   │   ├── TripSchedule.jsx
+│   │   │   └── TripSelection.jsx
+│   │   │
 │   │   ├── Header.jsx
-│   │   ├── Main.jsx
 │   │   ├── Nav.jsx
 │   │   └── TripDetails.jsx
-│   ├── hooks/           # 커스텀 훅
-│   │   ├── useGemini.js # Gemini API 관련 훅
-│   │   └── useStep.js   # 단계별 진행 관련 훅
-│   ├── store/           # Zustand 상태 관리
-│   │   └── usePlan.js   # 여행 계획 상태 관리
-│   └── styles/          # 스타일 파일
-│       ├── CityNextButton.css
-│       ├── CityProgress.module.css
-│       ├── ScheduleButton.css
-│       ├── TripSelection.css
-│       ├── App.jsx      # 메인 애플리케이션 컴포넌트
-│       ├── common.css   # 공통 스타일
-│       ├── index.js     # 진입점
-│       ├── schedule.css # 일정 관련 스타일
-│       └── style.css    # 전역 스타일
-├── .env                 # 환경 변수
-├── .gitignore           # Git 무시 파일
-├── .prettierrc          # Prettier 설정
-├── craco.config.js      # Create React App 설정 오버라이드
-├── package-lock.json    # 패키지 의존성 잠금 파일
-├── package.json         # 프로젝트 메타데이터 및 의존성
-└── README.md            # 프로젝트 문서
+│
+│   ├── hooks/                    # 커스텀 훅
+│   │   ├── useGemini.js          # Gemini API 관련 훅
+│   │   └── useStep.js            # 단계별 진행 관련 훅
+│
+│   ├── pages/                    # 페이지 단위 컴포넌트
+│   │   ├── AIResultPage.jsx
+│   │   ├── CityPlanPage.jsx
+│   │   ├── MainPage.jsx
+│   │   └── SchedulePage.jsx
+│
+│   ├── store/                     # Zustand 상태 관리
+│   │   └── usePlan.js             # 여행 계획 상태 관리
+│
+│   ├── styles/                    # 스타일 파일
+│   │   ├── ScheduleButton.css
+│   │   ├── style.css
+│   │   └── TripSelection.css
+│
+│   ├── App.jsx                    # 메인 애플리케이션 컴포넌트
+│   └── index.js                   # 진입점
+│
+├── .env                           # 환경 변수
+├── .gitignore                     # Git 무시 설정
+├── .prettierrc                    # Prettier 설정
+├── craco.config.js                # Create React App 설정 오버라이드
+├── package.json                   # 프로젝트 메타 정보 및 의존성
+├── package-lock.json              # 패키지 의존성 잠금 파일
+└── README.md                      # 프로젝트 문서
+
 ```

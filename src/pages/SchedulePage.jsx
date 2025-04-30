@@ -48,7 +48,7 @@ const SubTitle = styled.h3`
   font-size: 18px;
   color: #3b90f9;
   font-weight: bold;
-  animation: ${fadeInUp} 1s ease 0.75s forwards;
+  animation: ${fadeInUp} 1s ease 0.35s forwards;
 `;
 
 const MainTitle = styled.h2`
@@ -57,7 +57,7 @@ const MainTitle = styled.h2`
   font-size: 45px;
   line-height: 60px;
   margin-top: 20px;
-  animation: ${fadeInUp} 1s ease 0.75s forwards;
+  animation: ${fadeInUp} 1s ease 0.35s forwards;
 
   @media (max-width: 1100px) {
     font-size: 32px;
@@ -70,7 +70,7 @@ const BottomText = styled.div`
   padding-top: 180px;
   padding-left: 50px;
   margin-bottom: 300px;
-  animation: ${fadeInUp} 1s ease 0.75s forwards;
+  animation: ${fadeInUp} 1s ease 0.5s forwards;
 
   @media (max-width: 1100px) {
     padding-top: 60px;
@@ -115,14 +115,14 @@ const ContainerTextbox = styled.div`
   justify-content: center;
   text-align: center;
   padding: 2rem;
-  animation: ${fadeInUp} 1s ease 0.75s forwards;
+  animation: ${fadeInUp} 1.2s ease 0.7s forwards;
 `;
 
 const ScheduleImage = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  animation: ${fadeInUp} 1.2s ease 0.4s forwards;
+  animation: ${fadeInUp} 1.2s ease 0.75s forwards;
 
   img {
     max-width: 100%;

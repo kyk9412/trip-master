@@ -1,4 +1,3 @@
-import Style from './DomesticStyle';
 import Button from '@components/cityplan/Button';
 import usePlan from '@store/usePlan';
 import ButtonWrapper, { ContainerTextbox, Title, Text, Wrapper, Image } from '@components/cityplan/ButtonWrapper';

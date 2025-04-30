@@ -20,6 +20,7 @@ const ScheduledBtn = styled.div`
   border-radius: 30px;
   background-color: #f0c168;
   font-weight: bold;
+  font-family: 'Roboto', sans-serif;
   cursor: pointer;
   display: flex;
   justify-content: center;
@@ -28,7 +29,6 @@ const ScheduledBtn = styled.div`
   position: relative;
   overflow: hidden;
   text-transform: uppercase;
-  font-family: 'Roboto', sans-serif;
   transition: background-color 0.3s ease;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 
@@ -36,6 +36,11 @@ const ScheduledBtn = styled.div`
     background-color: #f09930;
     color: white;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
+  }
+  @media (max-width: 1100px) {
+    width: 210px;
+    height: 60px;
+    border-radius: 23px;
   }
 `;
 
@@ -56,6 +61,9 @@ const BtnText = styled.div`
 
   ${ScheduledBtn}:hover & {
     transform: scale(1.1);
+  }
+  @media (max-width: 1100px) {
+    font-size: 14px;
   }
 `;
 
