@@ -23,7 +23,7 @@ const Title = styled.h1`
   margin-bottom: 0.6rem;
 
   @media (max-width: 1100px) {
-    font-size: 2.5rem;
+    font-size: 2.3rem;
   }
 `;
 

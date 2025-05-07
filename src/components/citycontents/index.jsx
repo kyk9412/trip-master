@@ -1,8 +1,8 @@
 import TripSelection from './TripSelection';
-import CityContentTwo from './two/CityContentTwo';
+import CityContentTwo from './TripPlace';
 import TripDuration from './TripDuration';
 import TripCompanion from './TripCompanion';
-import TravelStyle from './TravelStyle';
+import TravelStyle from './TripStyle';
 import TripSchedule from './TripSchedule';
 import usePlan from '@store/usePlan';
 
