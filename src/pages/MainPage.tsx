@@ -1,6 +1,7 @@
 import { useNavigate } from 'react-router';
 import ScheduleButton from '@common/ScheduleButton';
 import styled from 'styled-components';
+import type { ReactNode } from 'react';
 
 const MainPageContainer = styled.div`
   display: flex;
@@ -27,7 +28,7 @@ const Title = styled.h1`
   }
 `;
 
-function MainPage() {
+function MainPage(): ReactNode {
   const navigate = useNavigate();
   const handleOnClick = () => {
     navigate('/schedule');

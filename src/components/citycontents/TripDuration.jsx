@@ -1,6 +1,7 @@
 import Button from '@components/cityplan/Button';
-import usePlan from '@store/usePlan';
 import ButtonWrapper, { ContainerTextbox, Title, Text, Image } from '@components/cityplan/ButtonWrapper';
+import usePlan from '@store/usePlan';
+
 function TripDuration() {
   const { handleSingleClick, isSingleSelected } = usePlan();
 
@@ -8,6 +9,7 @@ function TripDuration() {
     <>
       <ContainerTextbox>
         <Image src="/images/calendar.png" style={{ width: '50px' }} alt="Calendar" />
+
         <Title>여행기간은?</Title>
         <Text>원하는 기간을 선택해 주세요</Text>
       </ContainerTextbox>

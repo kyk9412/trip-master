@@ -1,4 +1,3 @@
-import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
 
@@ -68,7 +67,7 @@ const BtnText = styled.div`
 `;
 
 function ScheduleButton({ text = 'text', to }) {
-  const navigate = useNavigate();
+  const navigate = useNavigate(); // navigate 사용
 
   const handleOnClick = () => {
     navigate(to); // 클릭 시 to로 이동

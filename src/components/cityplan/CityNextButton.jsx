@@ -1,5 +1,5 @@
 import usePlan from '@store/usePlan';
-import { useNavigate } from 'react-router';
+import { useNavigate } from 'react-router-dom';
 
 function CityNextButton() {
   const { progress, canNext, setNextProgress, setCanNextByProgressValue } = usePlan();

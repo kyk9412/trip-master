@@ -1,6 +1,6 @@
 import Button from '@components/cityplan/Button';
-import usePlan from '@store/usePlan';
 import ButtonWrapper, { ContainerTextbox, Title, Text, Image } from '@components/cityplan/ButtonWrapper';
+import usePlan from '@store/usePlan';
 
 function TripSchedule() {
   const { handleSingleClick, isSingleSelected } = usePlan();
