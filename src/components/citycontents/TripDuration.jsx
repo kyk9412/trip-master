@@ -9,7 +9,6 @@ function TripDuration() {
     <>
       <ContainerTextbox>
         <Image src="/images/calendar.png" style={{ width: '50px' }} alt="Calendar" />
-
         <Title>여행기간은?</Title>
         <Text>원하는 기간을 선택해 주세요</Text>
       </ContainerTextbox>

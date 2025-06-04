@@ -51,14 +51,6 @@ const ResultContent = styled.div`
   white-space: pre-wrap;
 `;
 
-const ErrorMessage = styled.div`
-  width: 100%;
-  padding: 1rem;
-  background-color: #ffebee;
-  color: #c62828;
-  border-radius: 8px;
-  text-align: center;
-`;
 const AITitle = styled.h2`
   font-size: 2rem;
   color: #333;
