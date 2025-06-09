@@ -4,6 +4,9 @@ const ContainerTextbox = styled.div`
   font-family: 'Nanum Gothic', sans-serif;
   text-align: center;
   margin-top: 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 `;
 
 const Title = styled.h1`
