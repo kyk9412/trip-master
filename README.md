@@ -1,7 +1,5 @@
 # 트립 플래너 (Trip Planner)
 
-![Trip Planner Banner](https://via.placeholder.com/800x200?text=Trip+Planner)
-
 ## 📌 프로젝트 소개
 
 여행 일정을 효율적으로 계획하고 관리할 수 있는 React 기반 웹 애플리케이션입니다. Gemini API를 활용한 AI 추천 시스템과 직관적인 UI/UX를 통해 사용자 경험을 최적화했습니다.
@@ -34,6 +32,7 @@
 ![Zustand](https://img.shields.io/badge/Zustand-593D88?style=for-the-badge&logo=npm&logoColor=white)
 ![Styled Components](https://img.shields.io/badge/Styled_Components-DB7093?style=for-the-badge&logo=styled-components&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+![TailwindCSS](https://img.shields.io/badge/TailwindCSS-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white)
 
 ### 추가 라이브러리
 
@@ -41,7 +40,7 @@
 - react-router-dom: 라우팅 관리
 - styled-components: 컴포넌트 스타일링
 - zustand: 상태 관리
-- @craco/craco: Create React App 설정 커스터마이징
+- Vite: 경량화된 번들러 및 개발 서버
 
 ## 🧠 기술적 도전 및 해결 방법
 
@@ -82,7 +81,7 @@
 1. 저장소 클론
 
 ```bash
-git clone https://github.com/yourusername/trip-planner.git
+git clone https://github.com/kyk9412/trip-planner.git
 cd trip-planner
 ```
 
@@ -112,9 +111,9 @@ yarn start
 5. 빌드
 
 ```bash
-npm run build
+npm run dev
 # 또는
-yarn build
+yarn dev
 ```
 
 ## 🗂️ 프로젝트 구조
@@ -131,20 +130,19 @@ yarn build
 │ │ ├── Header.jsx
 │ │ ├── LoadingSpinner.jsx
 │ │ └── ScheduleButton.jsx
-│
-│ ├── components/                 # 기능별 컴포넌트
 │ │
+│ ├── components/                 # 기능별 컴포넌트
 │ │ ├── citycontents/             # 여행 콘텐츠 관련
 │ │ │ ├── place/                  # 여행지(국내/해외)
 │ │ │ │ ├── Domestic.jsx
 │ │ │ │ ├── Foreign.jsx
-│ │ │ │ ├── index.jsx
-│ │ │ │ ├── TripCompanion.jsx
-│ │ │ │ ├── TripDuration.jsx
-│ │ │ │ ├── TripPlace.jsx
-│ │ │ │ ├── TripSchedule.jsx
-│ │ │ │ ├── TripSelection.jsx
-│ │ │ │ └── TripStyle.jsx
+│ │ │ ├── index.jsx
+│ │ │ ├── TripCompanion.jsx
+│ │ │ ├── TripDuration.jsx
+│ │ │ ├── TripPlace.jsx
+│ │ │ ├── TripSchedule.jsx
+│ │ │ ├── TripSelection.jsx
+│ │ │ └── TripStyle.jsx
 │ │ │
 │ │ └── cityplan/                 # 여행 계획 단계 컴포넌트
 │ │     ├── Button.jsx
@@ -152,33 +150,38 @@ yarn build
 │ │     ├── CityBackButton.jsx
 │ │     ├── CityNextButton.jsx
 │ │     └── CityProgress.jsx
-│
-│ ├── data/                       # 정적 데이터 또는 API 연결 모듈
-│ │ └── gemini.js                 # Gemini AI 관련 데이터 처리
-│
-│ ├── hooks/                      # 커스텀 훅
-│ │ ├── useGemini.js              # Gemini API 처리 훅
-│
+│ │
+│ ├── schedule-page/              # 일정 페이지 전용 컴포넌트
+│ │ ├── index.ts
+│ │ ├── README.md
+│ │ └── SchedulePageComponent.tsx
+│ │
+│ ├── data/                       # 정적 데이터 또는 API 모듈
+│ │ └── gemini.ts                 # Gemini API 처리 훅
+│ │
+│ ├── hooks/                      # 커스텀 React 훅
+│ │ └── useGemini.ts              # Gemini API 처리 훅
+│ │
 │ ├── pages/                      # 주요 페이지 컴포넌트
-│ │ ├── AIResultPage.jsx
-│ │ ├── CityPlanPage.jsx
-│ │ ├── MainPage.jsx
-│ │ ├── SchedulePage.jsx
-│ │ └── SchedulePageStyle.jsx
-│
+│ │ ├── AIResultPage.tsx
+│ │ ├── CityPlanPage.tsx
+│ │ ├── MainPage.tsx
+│ │ ├── SchedulePage.tsx
+│ │ └── SchedulePageStyle.tsx
+│ │
 │ ├── store/                      # Zustand 상태 관리
-│ │ └── usePlan.js                # 여행 계획 상태 관리
-│
-│ ├── styles/                     # 스타일 파일
+│ │ └── usePlan.ts                # 여행 계획 상태 관리
+│ │
+│ ├── styles/                     # CSS 스타일 파일
 │ │ ├── ScheduleButton.css
 │ │ ├── style.css
 │ │ └── TripSelection.css
+│ │
+│ ├── App.tsx                     # 앱 루트 컴포넌트
+│ ├── main.tsx                    # Vite 진입점
+│ └── vite-env.d.ts               # 타입스크립트 환경 정의
 │
-│ ├── App.jsx                     # 앱의 루트 컴포넌트
-│ ├── main.tsx                    # 진입점 (Vite용)
-│ └── vite-env.d.ts               # 타입 정의
-│
-├── .env                          # 환경 변수
+├── .env                          # 환경 변수 파일
 ├── .gitignore                    # Git 무시 파일
 ├── eslint.config.js              # ESLint 설정
 ├── index.html                    # HTML 템플릿
