@@ -1,22 +1,3 @@
-import styled from 'styled-components';
-
-const Label = styled.label`
-  display: flex;
-  width: 256px;
-  height: 50px;
-  cursor: pointer;
-  background-color: #f5f4f4;
-  border-radius: 25px;
-  border: none;
-  text-align: center;
-  align-items: center;
-  justify-content: center;
-  font-size: 16px;
-  font-family: 'Nanum Gothic', sans-serif;
-  font-weight: 400;
-  color: #181818;
-`;
-
 function Button({ key = '', text, id, handleClick, active }) {
   return (
     <div
@@ -27,10 +8,16 @@ function Button({ key = '', text, id, handleClick, active }) {
         handleClick(id);
       }}
     >
-      <input type="checkbox" name={id} id={id} />
-      <Label htmlFor={id} className={`citytext ${active ? 'active' : ''}`}>
+      <input type="checkbox" name={id} id={id} className="hidden" />
+      <label
+        htmlFor={id}
+        className={`citytext flex w-[256px] h-[50px] cursor-pointer items-center justify-center rounded-[25px] border-none bg-[#f5f4f4] 
+          text-center text-[16px] font-normal text-[#181818] font-['Nanum_Gothic'] 
+          ${active ? 'active' : ''}
+          `}
+      >
         {text}
-      </Label>
+      </label>
     </div>
   );
 }

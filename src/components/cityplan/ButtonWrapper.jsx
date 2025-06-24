@@ -1,74 +1,35 @@
-import styled from 'styled-components';
-
-const ContainerTextbox = styled.div`
-  font-family: 'Nanum Gothic', sans-serif;
-  text-align: center;
-  margin-top: 80px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-`;
-
-const Title = styled.h1`
-  font-size: 30px;
-  line-height: 36px;
-  font-weight: 700;
-  color: #232323;
-  margin-top: 15px;
-  padding-bottom: 10px;
-
-  @media (max-width: 1100px) {
-    font-size: 27px;
-  }
-`;
-
-const Text = styled.p`
-  font-size: 15px;
-  font-weight: 400;
-  color: #787878;
-`;
-
-const Wrapper = styled.div`
-  display: flex;
-  flex-direction: ${({ direction }) => direction};
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  width: 100%;
-  max-width: 800px;
-  margin: 50px auto 0;
-  position: relative;
-`;
-
-const Image = styled.img`
-  width: 50px;
-  height: 50px;
-`;
-
-const TitleText = styled.div`
-  position: absolute;
-  top: -32px;
-  left: 0;
-  font-size: 15px;
-  font-weight: 400;
-  color: #787878;
-
-  @media (max-width: 1100px) {
-    position: absolute;
-    top: -32px;
-    left: 45px;
-  }
-`;
-
 function ButtonWrapper({ children, direction = 'row', titleText }) {
+  const directionClass = direction === 'row' ? 'flex-row' : 'flex-col';
   return (
-    <Wrapper direction={direction}>
-      <TitleText>{titleText}</TitleText>
+    <div
+      className={`relative flex flex-wrap items-center justify-center gap-[10px] w-full max-w-[800px] mx-auto mt-[60px] ${directionClass}`}
+    >
+      <div className="absolute top-[-32px] left-0 max-[1100px]:left-[45px] text-[15px] font-normal text-[#787878]">
+        {titleText}
+      </div>
       {children}
-    </Wrapper>
+    </div>
   );
 }
 
-export { ContainerTextbox, Title, Text, Wrapper, Image };
+export function ContainerTextbox({ children }) {
+  return <div className="font-['Nanum_Gothic'] text-center mt-[80px] flex flex-col items-center">{children}</div>;
+}
+
+export function Title({ children }) {
+  return (
+    <h1 className="text-[30px] leading-[36px] font-bold text-[#232323] mt-[15px] pb-[10px] max-[1100px]:text-[27px]">
+      {children}
+    </h1>
+  );
+}
+
+export function Text({ children }) {
+  return <p className="text-[15px] font-normal text-[#787878]">{children}</p>;
+}
+
+export function Image({ src, alt }) {
+  return <img src={src} alt={alt} className="w-[50px] h-[50px]" />;
+}
+
 export default ButtonWrapper;
